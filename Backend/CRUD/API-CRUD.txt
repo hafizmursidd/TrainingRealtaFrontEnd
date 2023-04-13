@@ -1,0 +1,26 @@
+{
+  "R_DBSection": {
+    "CommandTimeout": 600,
+    "R_DBConfigs": [
+      {
+        "Name": "R_DefaultConnectionString",
+        "ConnectionString": "server=.;Initial Catalog=Realta_DB;User ID=sa;Password=F8093F6CAEAFDDC975507D0EEBD760E4;",
+        "ProviderName": "System.Data.SqlClient",
+        "KeywordForPassword": "Password"
+      },
+      {
+        "Name": "R_ReportConnectionString",
+        "ConnectionString": "server=172.16.5.57,57746;Initial Catalog=Realta_DB;User ID=sa;Password=F8093F6CAEAFDDC975507D0EEBD760E4;",
+        "ProviderName": "System.Data.SqlClient",
+        "KeywordForPassword": "Password"
+      }
+    ]
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

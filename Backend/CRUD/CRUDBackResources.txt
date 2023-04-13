@@ -1,0 +1,6 @@
+Penamaan
+===================
+Project : CRUDBackResources
+Class : Resources_Dummy_Class
+Resource : CRUDBackResources_msgrsc
+		CRUDBackResources_msgrsc.id

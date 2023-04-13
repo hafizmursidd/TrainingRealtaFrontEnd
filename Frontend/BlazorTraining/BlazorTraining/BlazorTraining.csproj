@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.15" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    <PackageReference Include="Realta.FrontComponentCollectionNuget" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Back\Common\SAB00100Common\SAB00100Common.csproj" />
+    <ProjectReference Include="..\BlazorClientHelper\BlazorClientHelper.csproj" />
+    <ProjectReference Include="..\BlazorTrainingCommon\BlazorTrainingCommon.csproj" />
+    <ProjectReference Include="..\Front\Front\SAB00100Front\SAB00100Front.csproj" />
+    <ProjectReference Include="..\Front\Front\SAB00200Front\SAB00200Front.csproj" />
+    <ProjectReference Include="..\Front\Front\SAB00600Front\SAB00600Front.csproj" />
+    <ProjectReference Include="..\Front\Front\SAB00700Front\SAB00700Front.csproj" />
+    <ProjectReference Include="..\Front\Front\SAB00900Front\SAB00900Front.csproj" />
+    <ProjectReference Include="..\Front\Front\SAB01300Front\SAB01300Front.csproj" />
+    <ProjectReference Include="..\Front\Front\SAB01400Front\SAB01400Front.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="R_APIClient">
+      <HintPath>..\Dll Front\R_APIClient.dll</HintPath>
+    </Reference>
+    <Reference Include="R_AuthenticationEnumAndInterface">
+      <HintPath>..\Dll Front\R_AuthenticationEnumAndInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="R_BlazorFrontEnd">
+      <HintPath>..\Dll Front\R_BlazorFrontEnd.dll</HintPath>
+    </Reference>
+    <Reference Include="R_BlazorFrontEnd.Controls">
+      <HintPath>..\Dll Front\R_BlazorFrontEnd.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="R_CommonFrontBackAPI">
+      <HintPath>..\Dll Front\R_CommonFrontBackAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="R_ContextEnumAndInterface">
+      <HintPath>..\Dll Front\R_ContextEnumAndInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="R_ContextFrontEnd">
+      <HintPath>..\Dll Front\R_ContextFrontEnd.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,38 @@
+using R_Common;
+using R_BackEnd;
+using R_CommonFrontBackAPI;
+
+
+CRUDCls : R_BusinessObject<>
+loDb.SqlExecObjectQuery<CustomerStreamDTO>(lcCmd, poParameter.CCOMPANY_ID);
+
+R_Display
+============
+lcCmd = "select * from TrainCustomer(nolock) " +
+                    "Where CCOMPANY_ID={0} " +
+                    "And CustomerID={1} ";
+
+R_Saving
+===================
+Add
+lcCmd= "insert into TrainCustomer(CCOMPANY_ID, CustomerID, CustomerName, ContactName) values(@CCOMPANY_ID, @CustomerID, @CustomerName, @ContactName)";
+
+loDb = new R_Db();
+                loConn=loDb.GetConnection();
+                loCommand = loDb.GetCommand();
+                loCommand.CommandText = lcCmd;
+
+                loDb.R_AddCommandParameter(loCommand, "CCOMPANY_ID", DbType.String, 10, poNewEntity.CCOMPANY_ID);
+
+
+finally
+            {
+                if (loConn != null)
+                {
+                    if(loConn.State != ConnectionState.Closed)
+                    {
+                        loConn.Close();
+                    }
+                    loConn.Dispose();
+                }
+            }

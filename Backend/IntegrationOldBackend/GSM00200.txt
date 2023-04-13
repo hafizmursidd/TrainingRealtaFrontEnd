@@ -1,0 +1,4 @@
+curl --location --request POST 'http://localhost:5212/api/GSM00200/GetTableHDList' \
+--header 'R_StreamingContext: {"CCOMPANY_ID":{"TypeFullName":"System.String","TypeNameSpace":"","Value":"001"}}' \
+--header 'Cookie: RefreshToken=Gc%2BrpDSm7lg6l7xBa2ZwjYz9O5Lql3N6KNsBuD%2F4SzX6L8oS9PFZEp450Sr%2FXcNQQkjKldtsuBE1SjYHf3CA5A%3D%3D' \
+--data-raw ''

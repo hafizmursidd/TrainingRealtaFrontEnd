@@ -1,0 +1,28 @@
+﻿@page "/"
+@inherits IndexBase
+@using ExceptionCommon
+
+<PageTitle>Customer Streaming</PageTitle>
+
+<span>Total Customer Request </span><input type="text" @bind="lcCustomerCount" />
+<br />
+<button @onclick="StreamCustomer">Stream Customer</button>
+<hr />
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CustomerStreamDTO customer in customers)
+        {
+            <tr>
+                <td>@customer.CustomerId</td>
+                <td>@customer.CustomerName</td>
+            </tr>
+        }
+        <p>Status <span>@lcStatusMessage</span> </p>
+    </tbody>
+</table>

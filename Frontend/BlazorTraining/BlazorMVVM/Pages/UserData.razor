@@ -1,0 +1,59 @@
+@page "/userdata"
+<h3>User Data</h3>
+
+@if (UserDataViewModel.Users == null)
+{
+  <p><em>Loading...</em></p>
+}
+else
+{
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in UserDataViewModel.Users)
+    {
+      <tr>
+        <td>@user.Id</td>
+        <td>@user.Username</td>
+        <td>@user.Email</td>
+        <td>@user.Password</td>
+        <td>
+          <button class="btn btn-primary" @onclick="() => UserDataViewModel.SetUser(user)">Edit</button>
+          <button class="btn btn-danger" @onclick="() => UserDataViewModel.DeleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    }
+    </tbody>
+  </table>
+
+  <EditForm Model="@UserDataViewModel.User" OnValidSubmit="@SaveUser">
+    <div class="col-4">
+      <div class="form-group">
+        <label for="id">User ID</label>
+        <InputNumber class="form-control" id="id" disabled="@(!UserDataViewModel.IsAdd)" @bind-Value="UserDataViewModel.User.Id"/>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <InputText class="form-control" id="username" @bind-Value="UserDataViewModel.User.Username"/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <InputText class="form-control" id="email" @bind-Value="UserDataViewModel.User.Email"/>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <InputText class="form-control" id="password" @bind-Value="UserDataViewModel.User.Password"/>
+      </div>
+      <button type="reset" class="btn btn-secondary" @onclick="@(() => UserDataViewModel.AddUser())">Add</button>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+  </EditForm>
+}

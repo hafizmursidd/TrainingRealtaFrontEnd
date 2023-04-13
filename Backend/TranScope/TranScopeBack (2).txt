@@ -1,0 +1,23 @@
+using System.Transactions;
+
+
+TranScopeCls
+	TranScopeDataDTO ProcessWithoutTransactionDB(int poProcessRecordCount)
+		Customers = GetAllCustomer(poProcessRecordCount)
+		RemoveAllCustomer(Customers);
+                AddAllCopyCustomer(Customers);
+
+		loRtn.IsSuccess = true;
+
+	List<CustomerDbDTO> GetAllCustomer(int pnCount)
+	RemoveAllCustomer(List<CustomerDbDTO> poCustomers)
+	AddAllCopyCustomer(List<CustomerDbDTO> poCustomers)
+
+
+loDbParameter=loCommand.Parameters[0];
+loDbParCustomerID = loCommand.Parameters["CustomerID"];
+
+
+using (TransactionScope TransScope = new TransactionScope(TransactionScopeOption.RequiresNew))
+
+TransScope.Complete();

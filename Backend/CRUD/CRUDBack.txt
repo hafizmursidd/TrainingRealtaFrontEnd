@@ -1,0 +1,1 @@
+loDb.SqlExecObjectQuery<CustomerStreamDTO>(lcCmd, poParameter.CCOMPANY_ID);

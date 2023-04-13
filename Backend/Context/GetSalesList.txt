@@ -1,0 +1,4 @@
+curl --location --request POST 'http://localhost:5046/api/Context/GetSalesList' \
+--header '_internalcontext_company_id: {"TypeFullName":"System.String","TypeNameSpace":"","Value":"RCD"}' \
+--header 'R_CustomContext: {"PROGRAM_CONTEXT":{"TypeFullName":"ContextCommon.ProgramContextDTO","TypeNameSpace":"ContextCommon","Value":{"DepartmentId":"RnD"}}}' \
+--header 'R_StreamingContext: {"SALES_STREAM_CONTEXT":{"TypeFullName":"ContextCommon.GetSalesListContextDTO","TypeNameSpace":"ContextCommon","Value":{"SalesCount":"2"}}}'

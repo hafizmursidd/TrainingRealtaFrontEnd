@@ -1,0 +1,148 @@
+using System.Transactions;
+
+
+TranScopeCls
+	TranScopeDataDTO ProcessWithoutTransactionDB(int poProcessRecordCount)
+		Customers = GetAllCustomer(poProcessRecordCount)
+		RemoveAllCustomer(Customers);
+                AddAllCopyCustomer(Customers);
+
+		loRtn.IsSuccess = true;
+
+	List<CustomerDbDTO> GetAllCustomer(int pnCount)
+	RemoveAllCustomer(List<CustomerDbDTO> poCustomers)
+	AddAllCopyCustomer(List<CustomerDbDTO> poCustomers)
+
+
+loDbParameter=loCommand.Parameters[0];
+loDbParCustomerID = loCommand.Parameters["CustomerID"];
+
+
+using (TransactionScope TransScope = new TransactionScope(TransactionScopeOption.RequiresNew))
+
+TransScope.Complete();
+
+
+        private void RemoveAllCustomer(List<CustomerDbDTO> poCustomers)
+        {
+            R_Exception loException = new R_Exception();
+            try
+            {
+                foreach (CustomerDbDTO item in poCustomers)
+                {
+                    RemoveEachCustomer(item);
+                    AddLogEachCustomer(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                loException.Add(ex);
+            }
+
+        EndBlock:
+            loException.ThrowExceptionIfErrors();
+
+        }
+
+
+	private void RemoveEachCustomer (CustomerDbDTO poCustomer)
+        {
+            R_Exception loException = new R_Exception();
+            R_Db loDb = null;
+            DbConnection loConn = null;
+            DbCommand loCommand;
+            string lcCmd;
+            DbParameter loDbParameter;
+
+            try
+            {
+                loDb = new R_Db();
+                loCommand = loDb.GetCommand();
+                loConn = loDb.GetConnection();
+                loDb.R_AddCommandParameter(loCommand, "StrPar1", DbType.String, 50, "");
+                loDbParameter = loCommand.Parameters[0];
+
+                lcCmd = "delete TestCustomer where CustomerID=@StrPar1";
+                loCommand.CommandText = lcCmd;
+                loDbParameter.Value = poCustomer.CustomerID;
+                loDb.SqlExecNonQuery(loConn, loCommand, false);
+
+            }
+            catch (Exception ex)
+            {
+                loException.Add(ex);
+            }
+            finally
+            {
+                if (loConn != null)
+                {
+                    if (loConn.State != ConnectionState.Closed)
+                    {
+                        loConn.Close();
+                    }
+                    loConn.Dispose();
+                }
+
+
+            }
+        EndBlock:
+            loException.ThrowExceptionIfErrors();
+
+
+        }
+
+        private void AddLogEachCustomer(CustomerDbDTO poCustomer)
+        {
+            R_Exception loException = new R_Exception();
+            R_Db loDb = null;
+            DbConnection loConn = null;
+            DbCommand loCommand;
+            string lcCmd;
+            DbParameter loDbParameter;
+
+            try
+            {
+                using (TransactionScope TransScope = new TransactionScope(TransactionScopeOption.Suppress))
+                {
+                    loDb = new R_Db();
+                    loCommand = loDb.GetCommand();
+                    loConn = loDb.GetConnection();
+                    loDb.R_AddCommandParameter(loCommand, "StrPar1", DbType.String, 50, "");
+                    loDbParameter = loCommand.Parameters[0];
+
+                    lcCmd = "insert into TestCustomerLog(Log) Values(@StrPar1)";
+                    loCommand.CommandText = lcCmd;
+                    loDbParameter.Value = $"Remove Customer {poCustomer.CustomerID}";
+                    loDb.SqlExecNonQuery(loConn, loCommand, false);
+                }
+                   
+
+            }
+            catch (Exception ex)
+            {
+                loException.Add(ex);
+            }
+            finally
+            {
+                if (loConn != null)
+                {
+                    if (loConn.State != ConnectionState.Closed)
+                    {
+                        loConn.Close();
+                    }
+                    loConn.Dispose();
+                }
+
+
+            }
+        EndBlock:
+            loException.ThrowExceptionIfErrors();
+
+
+        }
+
+        
+
+
+
+

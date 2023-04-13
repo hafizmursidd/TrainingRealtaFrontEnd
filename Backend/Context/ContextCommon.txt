@@ -1,0 +1,33 @@
+SalesStreamDTO
+	public string CompanyId { get; set; }
+        public string DepartmentId { get; set; }
+        public string SalesId { get; set; }
+        public string SalesName { get; set; }
+
+OrderStreamDTO
+	public string CompanyId { get; set; }
+        public string DepartmentId { get; set; }
+        public string SalesId { get; set; }
+        public string OrderId { get; set; }
+        public string OrderDate { get; set; }
+
+ContextConstant
+	//Untuk Streamer Context
+        public const string ORDER_STREAM_CONTEXT= "ORDER_STREAM_CONTEXT";
+        public const string SALES_STREAM_CONTEXT = "SALES_STREAM_CONTEXT";
+        //Untuk Public Context
+        public const string PROGRAM_CONTEXT = "PROGRAM_CONTEXT";
+
+ProgramContextDTO
+	public string DepartmentId { get; set; }
+
+GetSalesListContextDTO
+	public int SalesCount { get; set; }
+
+GetOrderListContextDTO
+	public string SalesId { get; set; }
+        public int OrderCount { get; set; }
+
+IContextProgram
+	IAsyncEnumerable<SalesStreamDTO> GetSalesList();
+        IAsyncEnumerable<OrderStreamDTO> GetOrderList();

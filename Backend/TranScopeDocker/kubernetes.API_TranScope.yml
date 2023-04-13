@@ -1,0 +1,46 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-transcope
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-transcope
+  template:
+    metadata:
+      labels:
+        app: api-transcope
+    spec:
+      containers:
+      - name: api-transcope
+        image: rayhanyoshh/api_transcope:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: R_DBSection__CommandTimeout
+          value: "600"
+        - name: R_DBSection__R_DBConfigs__0__Name
+          value: R_DefaultConnectionString
+        - name: R_DBSection__R_DBConfigs__0__ConnectionString
+          value: server=192.168.2.4,1433;Initial Catalog=Realta_DB;User ID=sa;Password=F8093F6CAEAFDDC975507D0EEBD760E4
+        - name: R_DBSection__R_DBConfigs__0__ProviderName
+          value: System.Data.SqlClient
+        - name: R_DBSection__R_DBConfigs__0__KeywordForPassword
+          value: Password
+  
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-transcope-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 5000
+    targetPort: 80
+  selector:
+    app: api-transcope
+    

@@ -1,0 +1,41 @@
+AttachFileCls:R_IAttachFile
+
+Validation
+===================
+		if (poAttachFile.UserParameters.Count > 0)
+                {
+                   var loVar = poAttachFile.UserParameters.Where(x => x.Key.Equals(ProcessConstant.EMPLOYEE_ID)).FirstOrDefault().Value;
+                    if (loVar == null)
+                    {
+                        loException.Add("01", "Employee Id Parameter not found");
+                        goto EndBlock;
+                    }
+                    lcEmplId = ((System.Text.Json.JsonElement)loVar).GetString();
+                    if (string.IsNullOrEmpty(lcEmplId))
+                    {
+                        loException.Add("01", "Employee Id Parameter not found");
+                        goto EndBlock;
+                    }
+                }
+
+
+//Versi pendek
+lcCmd = $"Insert into TestEmployeeAttachment(CoId,EmpId,FileName,oData,FileExtension) values({poAttachFile.Key.COMPANY_ID},{lcEmployeeId},{poAttachFile.File.FileDescription},dbo.RFN_CombineByte({poAttachFile.Key.COMPANY_ID},{poAttachFile.Key.USER_ID},{poAttachFile.Key.KEY_GUID}),{poAttachFile.File.FileExtension} )";
+
+//versi parameter
+lcCmd = "Insert into TestEmployeeAttachment(CoId, EmpId, FileName, FileExtension, oData) Values(@CoId, @EmpId, @FileName, @FileExtension, dbo.RFN_CombineByte(@CoId,@UserId,@KeyGUID))";
+                loDb = new R_Db();
+                loCommand = loDb.GetCommand();
+                loCommand.CommandText = lcCmd;
+                loCommand.CommandType =CommandType.Text;
+
+                loDb.R_AddCommandParameter(loCommand, "CoId", DbType.String, 50, poAttachFile.Key.COMPANY_ID);
+                loDb.R_AddCommandParameter(loCommand, "EmpId", DbType.String, 50, lcEmplId);
+                loDb.R_AddCommandParameter(loCommand, "FileName", DbType.String, 50, poAttachFile.File.FileId);
+                loDb.R_AddCommandParameter(loCommand, "FileExtension", DbType.String, 50, poAttachFile.File.FileExtension);
+
+                loDb.R_AddCommandParameter(loCommand, "UserId", DbType.String, 50, poAttachFile.Key.USER_ID);
+                loDb.R_AddCommandParameter(loCommand, "KeyGUID", DbType.String, 50, poAttachFile.Key.KEY_GUID);
+
+                loDb.SqlExecNonQuery(loDb.GetConnection(), loCommand, true);
+

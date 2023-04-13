@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranScopeCommon", "TranScopeCommon\TranScopeCommon.csproj", "{69294436-9536-4829-ABF8-16244220F899}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranScopeBack", "TranScopeBack\TranScopeBack.csproj", "{1F90BB15-C1AE-4824-B6BE-7C0092FCD4C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranScopeService", "TranScopeService\TranScopeService.csproj", "{5072B9F1-B8AB-4812-B7D0-33D2AC9175F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API-TranScope", "API-TranScope\API-TranScope.csproj", "{BD3168BB-27BE-414B-8E87-4EDD78B6D244}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69294436-9536-4829-ABF8-16244220F899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69294436-9536-4829-ABF8-16244220F899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69294436-9536-4829-ABF8-16244220F899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69294436-9536-4829-ABF8-16244220F899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F90BB15-C1AE-4824-B6BE-7C0092FCD4C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F90BB15-C1AE-4824-B6BE-7C0092FCD4C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F90BB15-C1AE-4824-B6BE-7C0092FCD4C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F90BB15-C1AE-4824-B6BE-7C0092FCD4C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5072B9F1-B8AB-4812-B7D0-33D2AC9175F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5072B9F1-B8AB-4812-B7D0-33D2AC9175F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5072B9F1-B8AB-4812-B7D0-33D2AC9175F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5072B9F1-B8AB-4812-B7D0-33D2AC9175F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3168BB-27BE-414B-8E87-4EDD78B6D244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3168BB-27BE-414B-8E87-4EDD78B6D244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3168BB-27BE-414B-8E87-4EDD78B6D244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3168BB-27BE-414B-8E87-4EDD78B6D244}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

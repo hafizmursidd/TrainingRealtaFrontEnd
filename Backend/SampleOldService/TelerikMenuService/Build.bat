@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" "D:\Realta Library\TelerikMenuService\TelerikMenuService\TelerikMenuService.vbproj" /p:DeployOnBuild=True;Configuration=Debug;_PackageTempDir="D:\Deploy" /p:VisualStudioVersion=15.0 /flp:LogFile="D:\log\logTest.txt";Append;Verbosity=quiet;Encoding=UTF-8;ErrorsOnly=true;Summary=true

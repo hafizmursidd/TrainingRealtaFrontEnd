@@ -1,0 +1,18 @@
+# direktori
+.idea/
+.vs/
+.vscode/
+
+# semua file dalam direktori .idea, .vs, .vscode
+.idea/*
+.vs/*
+.vscode/*
+**/.idea/*
+**/.vs/*
+**/.vscode/*
+
+# direktori bin dan obj di setiap proyek
+**/bin/
+**/obj/
+**/bin/*
+**/obj/*

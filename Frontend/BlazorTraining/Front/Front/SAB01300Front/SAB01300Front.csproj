@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="ViewModels\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="ViewModels\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ExampleJsInterop.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.15" />
+    <PackageReference Include="Telerik.UI.for.Blazor" Version="3.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ViewModel\SAB01300Model\SAB01300Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="R_BlazorFrontEnd">
+      <HintPath>..\..\..\Dll Front\R_BlazorFrontEnd.dll</HintPath>
+    </Reference>
+    <Reference Include="R_BlazorFrontEnd.Controls">
+      <HintPath>..\..\..\Dll Front\R_BlazorFrontEnd.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="R_CommonFrontBackAPI">
+      <HintPath>..\..\..\Dll Front\R_CommonFrontBackAPI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

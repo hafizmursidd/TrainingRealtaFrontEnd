@@ -1,0 +1,9 @@
+DTO:
+==================
+TranScopeDataDTO
+	public bool IsSuccess
+TranScopeResultDTO
+	public TranScopeDataDTO data
+
+ITranScope
+	TranScopeResultDTO ProcessWithoutTransaction(int ProcessRecordCount)

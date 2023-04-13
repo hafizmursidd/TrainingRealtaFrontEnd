@@ -1,0 +1,40 @@
+------------Create DLL--------------
+dotnet build TranScopeService/TranScopeService.csproj -c Release 
+
+dotnet publish TranScopeService/TranScopeService.csproj -c Release -o  .\dll
+
+
+
+1.Create Image
+docker image build -f Dockerfile.API_TranScope --no-cache=true -t api_transcope .
+
+2.Lihat image
+docker run --rm -it --entrypoint=/bin/bash api_transcope
+
+3.Run Container
+docker container run --name [container_name] [docker_image]
+docker run –-name cont_transcope -p 5000:80 api_transcope
+
+4.Test
+http://localhost:5000/swagger/index.html
+
+
+Create dan Deploy
+=======================
+1.Create
+	docker compose -f docker-compose.API_TranScope.yml build
+2.Deploy
+	docker compose -f docker-compose.API_TranScope.yml up
+3.Drop
+	docker compose -f docker-compose.API_TranScope.yml down
+
+http://localhost:5000/swagger/index.html
+
+
+masukkan ke hub
+=================================
+copy and rename > docker tag [nama image] [account]/[nama image]
+push            > docker push [account]/[nama image]
+
+docker tag api_transcope riyanhusen/api_transcope
+docker push riyanhusen/api_transcope

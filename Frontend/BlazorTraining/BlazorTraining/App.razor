@@ -1,0 +1,29 @@
+﻿@using System.Reflection
+@using BlazorTraining.Shared.Tabs
+
+<Router AppAssembly="@typeof(App).Assembly" 
+        AdditionalAssemblies="@loadedAssemblies">
+    <Found Context="routeData">
+        <MenuTabsRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+@code {
+    private List<Assembly> loadedAssemblies = new()
+{
+        typeof(SAB00600Front.SAB00600).Assembly,
+        typeof(SAB00700Front.SAB00700).Assembly,
+        typeof(SAB00900Front.SAB00900).Assembly,
+        typeof(SAB01300Front.SAB01300).Assembly,
+        typeof(SAB01400Front.SAB01400).Assembly,
+        typeof(SAB00100Front.SAB00100).Assembly,
+        typeof(SAB00200Front.SAB00200).Assembly
+    };
+}

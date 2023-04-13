@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>2019-07-26T14:25:35.7415748+07:00</TimeStampOfAssociatedLegacyPublishXmlFile>
+    <_PublishTargetUrl>D:\Deploy\BackEndDeploy</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AccessButtonBack.dll">
+      <publishTime>06/06/2018 16:04:07</publishTime>
+    </File>
+    <File Include="bin/AccessButtonCommon.dll">
+      <publishTime>06/06/2018 16:00:38</publishTime>
+    </File>
+    <File Include="bin/ACCOR_PUB.dll">
+      <publishTime>12/20/2017 09:59:38</publishTime>
+    </File>
+    <File Include="bin/BackReportingDemo.dll">
+      <publishTime>10/18/2022 14:22:04</publishTime>
+    </File>
+    <File Include="bin/BackReportingDemo.pdb">
+      <publishTime>10/18/2022 14:22:04</publishTime>
+    </File>
+    <File Include="bin/Confuser.Core.dll">
+      <publishTime>03/21/2019 11:26:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.CrystalReports.Engine.dll">
+      <publishTime>12/12/2013 04:59:48</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ClientDoc.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommLayer.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommonControls.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommonObjectModel.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.Controllers.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CubeDefModel.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.DataDefModel.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.DataSetConversion.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ObjectFactory.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.Prompting.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ReportDefModel.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.XmlSerialize.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.Shared.dll">
+      <publishTime>12/12/2013 04:59:50</publishTime>
+    </File>
+    <File Include="bin/dbup-core.dll">
+      <publishTime>08/19/2019 13:46:35</publishTime>
+    </File>
+    <File Include="bin/dbup-sqlserver.dll">
+      <publishTime>08/19/2019 13:46:36</publishTime>
+    </File>
+    <File Include="bin/DigitalSignatureBack.dll">
+      <publishTime>04/18/2022 17:17:49</publishTime>
+    </File>
+    <File Include="bin/DigitalSignatureBack.pdb">
+      <publishTime>04/18/2022 17:17:49</publishTime>
+    </File>
+    <File Include="bin/dnlib.dll">
+      <publishTime>03/21/2019 11:27:57</publishTime>
+    </File>
+    <File Include="bin/DocumentFormat.OpenXml.dll">
+      <publishTime>05/23/2016 14:54:02</publishTime>
+    </File>
+    <File Include="bin/DotNetZip.dll">
+      <publishTime>11/19/2020 11:24:28</publishTime>
+    </File>
+    <File Include="bin/DotNetZip.pdb">
+      <publishTime>11/19/2020 11:24:28</publishTime>
+    </File>
+    <File Include="bin/ESSMenuBack.dll">
+      <publishTime>10/18/2022 14:22:02</publishTime>
+    </File>
+    <File Include="bin/ESSMenuBack.pdb">
+      <publishTime>10/18/2022 14:22:02</publishTime>
+    </File>
+    <File Include="bin/ESS_PUB_BACK.dll">
+      <publishTime>09/17/2019 16:22:36</publishTime>
+    </File>
+    <File Include="bin/ESS_PUB_COMMON.dll">
+      <publishTime>09/17/2019 16:22:32</publishTime>
+    </File>
+    <File Include="bin/FileHelpers.dll">
+      <publishTime>05/23/2016 14:54:02</publishTime>
+    </File>
+    <File Include="bin/GSI00100Back.dll">
+      <publishTime>01/29/2020 14:20:39</publishTime>
+    </File>
+    <File Include="bin/GSI00100Back.pdb">
+      <publishTime>01/29/2020 14:20:39</publishTime>
+    </File>
+    <File Include="bin/GSI00100Common.dll">
+      <publishTime>01/29/2020 14:20:35</publishTime>
+    </File>
+    <File Include="bin/GSI00100Common.pdb">
+      <publishTime>01/29/2020 14:20:35</publishTime>
+    </File>
+    <File Include="bin/GSM00100Back.dll">
+      <publishTime>06/21/2022 13:35:17</publishTime>
+    </File>
+    <File Include="bin/GSM00100Back.dll.config">
+      <publishTime>06/21/2022 13:35:12</publishTime>
+    </File>
+    <File Include="bin/GSM00100Back.pdb">
+      <publishTime>06/21/2022 13:35:17</publishTime>
+    </File>
+    <File Include="bin/GSM00100Common.dll">
+      <publishTime>07/21/2022 11:08:53</publishTime>
+    </File>
+    <File Include="bin/GSM00100Common.pdb">
+      <publishTime>07/21/2022 11:08:53</publishTime>
+    </File>
+    <File Include="bin/GSM00200Back.dll">
+      <publishTime>01/29/2020 14:20:40</publishTime>
+    </File>
+    <File Include="bin/GSM00200Back.pdb">
+      <publishTime>01/29/2020 14:20:40</publishTime>
+    </File>
+    <File Include="bin/GSM00200Common.dll">
+      <publishTime>01/29/2020 14:20:36</publishTime>
+    </File>
+    <File Include="bin/GSM00200Common.pdb">
+      <publishTime>01/29/2020 14:20:36</publishTime>
+    </File>
+    <File Include="bin/GSM21000Back.dll">
+      <publishTime>06/06/2018 16:04:09</publishTime>
+    </File>
+    <File Include="bin/HelperStreamExtensionLibrary.dll">
+      <publishTime>08/08/2017 11:51:49</publishTime>
+    </File>
+    <File Include="bin/HelperStreamExtensionLibrary.pdb">
+      <publishTime>08/08/2017 11:51:49</publishTime>
+    </File>
+    <File Include="bin/id/ESSMenuBack.resources.dll">
+      <publishTime>10/18/2022 14:22:03</publishTime>
+    </File>
+    <File Include="bin/id/REL_BackEnd.resources.dll">
+      <publishTime>10/18/2022 14:14:26</publishTime>
+    </File>
+    <File Include="bin/id/SAM01600BackResources.resources.dll">
+      <publishTime>01/29/2020 14:20:36</publishTime>
+    </File>
+    <File Include="bin/id/TelerikMenuBackResources.resources.dll">
+      <publishTime>10/18/2022 10:45:36</publishTime>
+    </File>
+    <File Include="bin/Ionic.Zip.dll">
+      <publishTime>12/11/2018 13:45:09</publishTime>
+    </File>
+    <File Include="bin/ja/REL_BackEnd.resources.dll">
+      <publishTime>10/18/2022 14:14:27</publishTime>
+    </File>
+    <File Include="bin/ja/TelerikMenuBackResources.resources.dll">
+      <publishTime>10/18/2022 10:45:36</publishTime>
+    </File>
+    <File Include="bin/JWT.dll">
+      <publishTime>05/23/2016 14:53:30</publishTime>
+    </File>
+    <File Include="bin/KeySynch.dll">
+      <publishTime>05/23/2016 14:53:30</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>09/10/2018 13:37:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Threading.Tasks.dll">
+      <publishTime>04/07/2014 12:26:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Threading.Tasks.Extensions.dll">
+      <publishTime>04/07/2014 12:26:14</publishTime>
+    </File>
+    <File Include="bin/MyProfileBack.dll">
+      <publishTime>01/29/2020 14:20:39</publishTime>
+    </File>
+    <File Include="bin/MyProfileBack.pdb">
+      <publishTime>01/29/2020 14:20:39</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/13/2016 23:06:14</publishTime>
+    </File>
+    <File Include="bin/REL_BackEnd.dll">
+      <publishTime>10/18/2022 14:14:26</publishTime>
+    </File>
+    <File Include="bin/REL_BackEnd.pdb">
+      <publishTime>10/18/2022 14:14:26</publishTime>
+    </File>
+    <File Include="bin/REL_Common.dll">
+      <publishTime>10/18/2022 14:22:31</publishTime>
+    </File>
+    <File Include="bin/REL_Common.pdb">
+      <publishTime>10/18/2022 14:22:31</publishTime>
+    </File>
+    <File Include="bin/REL_StreamExtendedLibrary.dll">
+      <publishTime>09/28/2021 00:59:50</publishTime>
+    </File>
+    <File Include="bin/REL_StreamExtendedLibrary.pdb">
+      <publishTime>09/28/2021 00:59:50</publishTime>
+    </File>
+    <File Include="bin/Resources/signtool.exe">
+      <publishTime>11/06/2019 08:33:25</publishTime>
+    </File>
+    <File Include="bin/RESTfulEngine.CSharpClient.dll">
+      <publishTime>08/14/2018 16:16:38</publishTime>
+    </File>
+    <File Include="bin/R_EmailEngine.dll">
+      <publishTime>06/10/2022 12:01:42</publishTime>
+    </File>
+    <File Include="bin/R_EmailEngine.dll.config">
+      <publishTime>04/26/2022 10:53:20</publishTime>
+    </File>
+    <File Include="bin/R_EmailEngine.pdb">
+      <publishTime>04/26/2022 19:19:18</publishTime>
+    </File>
+    <File Include="bin/R_Version.dll">
+      <publishTime>09/24/2021 10:34:49</publishTime>
+    </File>
+    <File Include="bin/R_Version.pdb">
+      <publishTime>09/24/2021 10:34:49</publishTime>
+    </File>
+    <File Include="bin/SAB02400Back.dll">
+      <publishTime>10/18/2022 14:22:04</publishTime>
+    </File>
+    <File Include="bin/SAB02400Back.pdb">
+      <publishTime>10/18/2022 14:22:04</publishTime>
+    </File>
+    <File Include="bin/SAI00100Back.dll">
+      <publishTime>01/29/2020 14:20:40</publishTime>
+    </File>
+    <File Include="bin/SAI00100Back.pdb">
+      <publishTime>01/29/2020 14:20:40</publishTime>
+    </File>
+    <File Include="bin/SAI00100Common.dll">
+      <publishTime>01/29/2020 14:20:35</publishTime>
+    </File>
+    <File Include="bin/SAI00100Common.pdb">
+      <publishTime>01/29/2020 14:20:35</publishTime>
+    </File>
+    <File Include="bin/SAM00200Back.dll">
+      <publishTime>01/29/2020 14:20:38</publishTime>
+    </File>
+    <File Include="bin/SAM00200Back.pdb">
+      <publishTime>01/29/2020 14:20:38</publishTime>
+    </File>
+    <File Include="bin/SAM00200Common.dll">
+      <publishTime>09/27/2021 14:31:25</publishTime>
+    </File>
+    <File Include="bin/SAM00200Common.pdb">
+      <publishTime>09/27/2021 14:31:25</publishTime>
+    </File>
+    <File Include="bin/SAM01000Back.dll">
+      <publishTime>06/13/2022 12:08:18</publishTime>
+    </File>
+    <File Include="bin/SAM01000Back.pdb">
+      <publishTime>06/13/2022 12:08:18</publishTime>
+    </File>
+    <File Include="bin/SAM01100Back.dll">
+      <publishTime>12/14/2021 12:34:22</publishTime>
+    </File>
+    <File Include="bin/SAM01100Back.pdb">
+      <publishTime>12/14/2021 12:34:22</publishTime>
+    </File>
+    <File Include="bin/SAM01100Common.dll">
+      <publishTime>12/07/2021 07:22:21</publishTime>
+    </File>
+    <File Include="bin/SAM01100Common.pdb">
+      <publishTime>12/07/2021 07:22:21</publishTime>
+    </File>
+    <File Include="bin/SAM01200Back.dll">
+      <publishTime>06/10/2022 12:07:28</publishTime>
+    </File>
+    <File Include="bin/SAM01200Back.dll.config">
+      <publishTime>06/10/2022 11:46:22</publishTime>
+    </File>
+    <File Include="bin/SAM01200Back.pdb">
+      <publishTime>06/10/2022 12:07:28</publishTime>
+    </File>
+    <File Include="bin/SAM01200Common.dll">
+      <publishTime>06/10/2022 11:38:17</publishTime>
+    </File>
+    <File Include="bin/SAM01200Common.pdb">
+      <publishTime>06/10/2022 11:38:17</publishTime>
+    </File>
+    <File Include="bin/SAM01300Back.dll">
+      <publishTime>01/29/2020 14:20:38</publishTime>
+    </File>
+    <File Include="bin/SAM01300Back.pdb">
+      <publishTime>01/29/2020 14:20:38</publishTime>
+    </File>
+    <File Include="bin/SAM01300Common.dll">
+      <publishTime>01/29/2020 14:20:35</publishTime>
+    </File>
+    <File Include="bin/SAM01300Common.pdb">
+      <publishTime>01/29/2020 14:20:35</publishTime>
+    </File>
+    <File Include="bin/SAM01400Back.dll">
+      <publishTime>01/29/2020 14:20:38</publishTime>
+    </File>
+    <File Include="bin/SAM01400Back.pdb">
+      <publishTime>01/29/2020 14:20:38</publishTime>
+    </File>
+    <File Include="bin/SAM01500Back.dll">
+      <publishTime>01/29/2020 14:20:38</publishTime>
+    </File>
+    <File Include="bin/SAM01500Back.pdb">
+      <publishTime>01/29/2020 14:20:38</publishTime>
+    </File>
+    <File Include="bin/SAM01500Common.dll">
+      <publishTime>01/29/2020 14:20:36</publishTime>
+    </File>
+    <File Include="bin/SAM01500Common.pdb">
+      <publishTime>01/29/2020 14:20:36</publishTime>
+    </File>
+    <File Include="bin/SAM01600Back.dll">
+      <publishTime>01/29/2020 14:20:39</publishTime>
+    </File>
+    <File Include="bin/SAM01600Back.pdb">
+      <publishTime>01/29/2020 14:20:39</publishTime>
+    </File>
+    <File Include="bin/SAM01600BackResources.dll">
+      <publishTime>01/29/2020 14:20:36</publishTime>
+    </File>
+    <File Include="bin/SAM01600BackResources.pdb">
+      <publishTime>01/29/2020 14:20:36</publishTime>
+    </File>
+    <File Include="bin/SAM01600Common.dll">
+      <publishTime>08/03/2021 09:58:00</publishTime>
+    </File>
+    <File Include="bin/SAM01600Common.pdb">
+      <publishTime>08/03/2021 09:58:00</publishTime>
+    </File>
+    <File Include="bin/SAM02100Back.dll">
+      <publishTime>11/18/2020 23:29:31</publishTime>
+    </File>
+    <File Include="bin/SAM02100Back.pdb">
+      <publishTime>11/18/2020 23:29:31</publishTime>
+    </File>
+    <File Include="bin/SAM02100Common.dll">
+      <publishTime>12/01/2020 21:08:32</publishTime>
+    </File>
+    <File Include="bin/SAM02100Common.pdb">
+      <publishTime>12/01/2020 21:08:32</publishTime>
+    </File>
+    <File Include="bin/SAM02200Back.dll">
+      <publishTime>01/29/2020 14:20:40</publishTime>
+    </File>
+    <File Include="bin/SAM02200Back.pdb">
+      <publishTime>01/29/2020 14:20:40</publishTime>
+    </File>
+    <File Include="bin/SAM02200Common.dll">
+      <publishTime>01/29/2020 14:20:36</publishTime>
+    </File>
+    <File Include="bin/SAM02200Common.pdb">
+      <publishTime>01/29/2020 14:20:36</publishTime>
+    </File>
+    <File Include="bin/SAM02300Back.dll">
+      <publishTime>01/29/2020 14:20:40</publishTime>
+    </File>
+    <File Include="bin/SAM02300Back.pdb">
+      <publishTime>01/29/2020 14:20:40</publishTime>
+    </File>
+    <File Include="bin/SAM02300Common.dll">
+      <publishTime>03/21/2022 16:38:31</publishTime>
+    </File>
+    <File Include="bin/SAM02300Common.pdb">
+      <publishTime>03/21/2022 16:38:31</publishTime>
+    </File>
+    <File Include="bin/SAM02400Back.dll">
+      <publishTime>02/26/2020 18:41:43</publishTime>
+    </File>
+    <File Include="bin/SAM02400Back.pdb">
+      <publishTime>02/26/2020 18:41:43</publishTime>
+    </File>
+    <File Include="bin/SAM02400Common.dll">
+      <publishTime>02/26/2020 18:15:22</publishTime>
+    </File>
+    <File Include="bin/SAM02400Common.pdb">
+      <publishTime>02/26/2020 18:15:22</publishTime>
+    </File>
+    <File Include="bin/SAM02500Back.dll">
+      <publishTime>02/13/2020 14:49:32</publishTime>
+    </File>
+    <File Include="bin/SAM02500Back.pdb">
+      <publishTime>02/13/2020 14:49:32</publishTime>
+    </File>
+    <File Include="bin/SAM02500Common.dll">
+      <publishTime>02/13/2020 14:49:31</publishTime>
+    </File>
+    <File Include="bin/SAM02500Common.pdb">
+      <publishTime>02/13/2020 14:49:31</publishTime>
+    </File>
+    <File Include="bin/SAM02600Back.dll">
+      <publishTime>09/22/2020 15:06:58</publishTime>
+    </File>
+    <File Include="bin/SAM02600Back.pdb">
+      <publishTime>09/22/2020 15:06:58</publishTime>
+    </File>
+    <File Include="bin/SAM02600Common.dll">
+      <publishTime>09/22/2020 15:03:32</publishTime>
+    </File>
+    <File Include="bin/SAM02600Common.pdb">
+      <publishTime>09/22/2020 15:03:32</publishTime>
+    </File>
+    <File Include="bin/SAM02700Back.dll">
+      <publishTime>07/20/2020 04:33:16</publishTime>
+    </File>
+    <File Include="bin/SAM02700Back.pdb">
+      <publishTime>07/20/2020 04:33:16</publishTime>
+    </File>
+    <File Include="bin/SAM02700Common.dll">
+      <publishTime>07/20/2020 04:33:15</publishTime>
+    </File>
+    <File Include="bin/SAM02700Common.pdb">
+      <publishTime>07/20/2020 04:33:15</publishTime>
+    </File>
+    <File Include="bin/SampleErrorMultiLangResources.dll">
+      <publishTime>04/24/2020 15:41:21</publishTime>
+    </File>
+    <File Include="bin/SampleErrorMultiLangResources.pdb">
+      <publishTime>04/24/2020 15:41:21</publishTime>
+    </File>
+    <File Include="bin/SendGrid.dll">
+      <publishTime>03/24/2022 01:39:48</publishTime>
+    </File>
+    <File Include="bin/SendGrid.pdb">
+      <publishTime>03/24/2022 01:39:48</publishTime>
+    </File>
+    <File Include="bin/SpreadsheetLight.dll">
+      <publishTime>05/23/2016 14:54:02</publishTime>
+    </File>
+    <File Include="bin/SQLHelper.dll">
+      <publishTime>09/24/2021 10:00:26</publishTime>
+    </File>
+    <File Include="bin/SQLHelper.pdb">
+      <publishTime>09/24/2021 10:00:26</publishTime>
+    </File>
+    <File Include="bin/StarkbankEcdsa.dll">
+      <publishTime>11/10/2021 04:27:58</publishTime>
+    </File>
+    <File Include="bin/stdole.dll">
+      <publishTime>04/22/2012 22:21:30</publishTime>
+    </File>
+    <File Include="bin/System.Data.dll">
+      <publishTime>03/18/2010 19:31:26</publishTime>
+    </File>
+    <File Include="bin/System.IO.dll">
+      <publishTime>02/18/2015 17:07:08</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>02/19/2015 20:10:46</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.dll">
+      <publishTime>02/18/2015 17:07:08</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.dll">
+      <publishTime>02/18/2015 17:07:08</publishTime>
+    </File>
+    <File Include="bin/Telerik.WinControls.dll">
+      <publishTime>03/31/2015 19:14:36</publishTime>
+    </File>
+    <File Include="bin/Telerik.WinControls.RichTextEditor.dll">
+      <publishTime>03/31/2015 19:15:34</publishTime>
+    </File>
+    <File Include="bin/Telerik.WinControls.UI.dll">
+      <publishTime>03/31/2015 19:14:46</publishTime>
+    </File>
+    <File Include="bin/TelerikCommon.dll">
+      <publishTime>03/31/2015 19:14:30</publishTime>
+    </File>
+    <File Include="bin/TelerikMenuBackCls.dll">
+      <publishTime>10/18/2022 14:33:49</publishTime>
+    </File>
+    <File Include="bin/TelerikMenuBackCls.pdb">
+      <publishTime>10/18/2022 14:33:49</publishTime>
+    </File>
+    <File Include="bin/TelerikMenuBackResources.dll">
+      <publishTime>10/18/2022 10:45:36</publishTime>
+    </File>
+    <File Include="bin/TelerikMenuBackResources.pdb">
+      <publishTime>10/18/2022 10:45:36</publishTime>
+    </File>
+    <File Include="bin/TelerikMenuService.dll">
+      <publishTime>10/18/2022 14:35:59</publishTime>
+    </File>
+    <File Include="bin/TelerikMenuService.pdb">
+      <publishTime>10/18/2022 14:35:59</publishTime>
+    </File>
+    <File Include="bin/TelerikMenuService.xml">
+      <publishTime>10/18/2022 14:35:59</publishTime>
+    </File>
+    <File Include="bin/TestGenerateReport.dll">
+      <publishTime>03/20/2018 19:46:30</publishTime>
+    </File>
+    <File Include="bin/TestGenerateReportCommon.dll">
+      <publishTime>03/20/2018 19:46:09</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/18/2022 17:19:33</publishTime>
+    </File>
+    <File Include="Services/AccessButtonService/AccessButtonService.svc">
+      <publishTime>10/04/2016 10:13:37</publishTime>
+    </File>
+    <File Include="Services/BackReportingDemoService/BackReportingDemoService.svc">
+      <publishTime>07/13/2021 15:35:39</publishTime>
+    </File>
+    <File Include="Services/ConsoleService/ConsoleService.svc">
+      <publishTime>03/27/2017 10:56:49</publishTime>
+    </File>
+    <File Include="Services/ESSMenuService/ESSMenuService.svc">
+      <publishTime>11/29/2018 11:23:07</publishTime>
+    </File>
+    <File Include="Services/ESSMenuService/ESSMenuStreamingService.svc">
+      <publishTime>11/30/2018 15:49:37</publishTime>
+    </File>
+    <File Include="Services/ESS_LOOKUPSERVICES/ESS_PUB_StreamingService.svc">
+      <publishTime>09/25/2019 15:01:55</publishTime>
+    </File>
+    <File Include="Services/GSI00100Service/GSI00100StreamingService/GSI00100StreamingService.svc">
+      <publishTime>10/04/2016 10:13:44</publishTime>
+    </File>
+    <File Include="Services/GSM00100Service/GSM00100Service.svc">
+      <publishTime>10/04/2016 10:13:51</publishTime>
+    </File>
+    <File Include="Services/GSM00100Service/GSM00100StreamingService/GSM00100StreamingService.svc">
+      <publishTime>10/04/2016 10:13:56</publishTime>
+    </File>
+    <File Include="Services/GSM00200Service/GSM00200Service.svc">
+      <publishTime>10/04/2016 10:14:03</publishTime>
+    </File>
+    <File Include="Services/GSM00200Service/GSM00200StreamingService/GSM00200StreamingService.svc">
+      <publishTime>10/04/2016 10:14:13</publishTime>
+    </File>
+    <File Include="Services/GSM00200Service/GSM00210Service/GSM00210Service.svc">
+      <publishTime>10/04/2016 10:14:07</publishTime>
+    </File>
+    <File Include="Services/GSM21000Service/GSM21000DetailService/GSM21000DetailService.svc">
+      <publishTime>10/03/2016 17:09:17</publishTime>
+    </File>
+    <File Include="Services/GSM21000Service/GSM21000HDChildService/GSM21000HDChildService.svc">
+      <publishTime>10/03/2016 17:09:24</publishTime>
+    </File>
+    <File Include="Services/GSM21000Service/GSM21000Service.svc">
+      <publishTime>10/03/2016 17:09:55</publishTime>
+    </File>
+    <File Include="Services/GSM21000Service/GSM21000StreamingService/GSM21000StreamingService.svc">
+      <publishTime>10/03/2016 17:09:34</publishTime>
+    </File>
+    <File Include="Services/GSM21000Service/GSM21000TranslateService/GSM21000TranslateService.svc">
+      <publishTime>10/03/2016 17:09:41</publishTime>
+    </File>
+    <File Include="Services/GSM21000Service/GSM21010Service/GSM21010Service.svc">
+      <publishTime>10/03/2016 17:09:50</publishTime>
+    </File>
+    <File Include="Services/Helper/R_EmailEngineService.svc">
+      <publishTime>10/03/2016 16:56:55</publishTime>
+    </File>
+    <File Include="Services/Helper/R_LicenseActivationService.svc">
+      <publishTime>10/03/2016 16:56:58</publishTime>
+    </File>
+    <File Include="Services/Helper/R_LockingService.svc">
+      <publishTime>10/03/2016 16:57:02</publishTime>
+    </File>
+    <File Include="Services/Helper/R_MailMergeService.svc">
+      <publishTime>10/03/2016 16:57:06</publishTime>
+    </File>
+    <File Include="Services/Helper/R_PivotService.svc">
+      <publishTime>10/03/2016 16:57:10</publishTime>
+    </File>
+    <File Include="Services/Helper/R_ProcessAndUploadService.svc">
+      <publishTime>10/03/2016 16:57:14</publishTime>
+    </File>
+    <File Include="Services/Helper/R_SecurityPolicyService.svc">
+      <publishTime>10/03/2016 16:57:18</publishTime>
+    </File>
+    <File Include="Services/LoginService/LoginService.svc">
+      <publishTime>10/03/2016 17:02:06</publishTime>
+    </File>
+    <File Include="Services/MenuService/MenuService.svc">
+      <publishTime>10/03/2016 17:02:04</publishTime>
+    </File>
+    <File Include="Services/MenuService/MenuStreamingService/MenuStreamingService.svc">
+      <publishTime>10/03/2016 17:02:01</publishTime>
+    </File>
+    <File Include="Services/MyProfileService/MyProfileService.svc">
+      <publishTime>10/03/2016 17:01:59</publishTime>
+    </File>
+    <File Include="Services/SAI00100Service/SAI00100Service.svc">
+      <publishTime>07/25/2018 13:57:34</publishTime>
+    </File>
+    <File Include="Services/SAI00100Service/SAI00100StreamingService/SAI00100StreamingService.svc">
+      <publishTime>10/04/2016 10:14:29</publishTime>
+    </File>
+    <File Include="Services/SAM00200Service/SAM00200Service.svc">
+      <publishTime>10/04/2016 10:14:45</publishTime>
+    </File>
+    <File Include="Services/SAM00200Service/SAM00200StreamingService/SAM00200StreamingService.svc">
+      <publishTime>10/04/2016 10:14:50</publishTime>
+    </File>
+    <File Include="Services/SAM01000Service/SAM01000PlatformService/SAM01000PlatformService.svc">
+      <publishTime>07/20/2020 04:39:12</publishTime>
+    </File>
+    <File Include="Services/SAM01000Service/SAM01000Service.svc">
+      <publishTime>10/04/2016 10:14:55</publishTime>
+    </File>
+    <File Include="Services/SAM01000Service/SAM01000StreamingService/SAM01000StreamingService.svc">
+      <publishTime>10/04/2016 10:14:59</publishTime>
+    </File>
+    <File Include="Services/SAM01100Service/MenuProgramService/MenuProgramService.svc">
+      <publishTime>10/04/2016 10:15:14</publishTime>
+    </File>
+    <File Include="Services/SAM01100Service/SAM01100Service.svc">
+      <publishTime>10/04/2016 10:15:05</publishTime>
+    </File>
+    <File Include="Services/SAM01100Service/SAM01100StreamingService/SAM01100StreamingService.svc">
+      <publishTime>10/04/2016 10:15:09</publishTime>
+    </File>
+    <File Include="Services/SAM01200Service/SAM01200Service.svc">
+      <publishTime>10/04/2016 10:15:19</publishTime>
+    </File>
+    <File Include="Services/SAM01200Service/SAM01200StreamingService/SAM01200StreamingService.svc">
+      <publishTime>10/04/2016 10:15:33</publishTime>
+    </File>
+    <File Include="Services/SAM01200Service/UserCompanyService/UserCompanyService.svc">
+      <publishTime>10/04/2016 10:15:28</publishTime>
+    </File>
+    <File Include="Services/SAM01200Service/UserMenuService/UserMenuService.svc">
+      <publishTime>10/04/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Services/SAM01300Service/SAM01300Service.svc">
+      <publishTime>10/04/2016 10:15:39</publishTime>
+    </File>
+    <File Include="Services/SAM01300Service/SAM01300StreamingService/SAM01300StreamingService.svc">
+      <publishTime>10/04/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Services/SAM01400Service/GST0200Service/GST0200Service.svc">
+      <publishTime>10/04/2016 10:16:08</publishTime>
+    </File>
+    <File Include="Services/SAM01400Service/GST0210Service/GST0210Service.svc">
+      <publishTime>10/04/2016 10:16:04</publishTime>
+    </File>
+    <File Include="Services/SAM01400Service/GST0220Service/GST0220Service.svc">
+      <publishTime>10/04/2016 10:15:59</publishTime>
+    </File>
+    <File Include="Services/SAM01400Service/GST0230Service/GST0230Service.svc">
+      <publishTime>10/04/2016 10:15:54</publishTime>
+    </File>
+    <File Include="Services/SAM01400Service/SAM01400Service.svc">
+      <publishTime>10/04/2016 10:15:48</publishTime>
+    </File>
+    <File Include="Services/SAM01500Service/SAM01500Service.svc">
+      <publishTime>10/04/2016 10:16:15</publishTime>
+    </File>
+    <File Include="Services/SAM01500Service/SAM01500StreamingService/SAM01500StreamingService.svc">
+      <publishTime>10/04/2016 10:16:19</publishTime>
+    </File>
+    <File Include="Services/SAM01600Service/SAM01600Service/SAM01600Service.svc">
+      <publishTime>10/04/2016 10:16:33</publishTime>
+    </File>
+    <File Include="Services/SAM01600Service/SAM01600StreamingService/SAM01600StreamingService.svc">
+      <publishTime>10/04/2016 10:16:38</publishTime>
+    </File>
+    <File Include="Services/SAM02100Service/SAM02100Service.svc">
+      <publishTime>10/04/2016 10:16:53</publishTime>
+    </File>
+    <File Include="Services/SAM02100Service/SAM02100StreamingService/SAM02100StreamingService.svc">
+      <publishTime>10/04/2016 10:16:57</publishTime>
+    </File>
+    <File Include="Services/SAM02200Service/SAM02200Service.svc">
+      <publishTime>10/04/2016 10:17:06</publishTime>
+    </File>
+    <File Include="Services/SAM02200Service/SAM02200StreamingService/SAM02200StreamingService.svc">
+      <publishTime>10/04/2016 10:17:10</publishTime>
+    </File>
+    <File Include="Services/SAM02300Service/SAM02300Service.svc">
+      <publishTime>02/07/2018 15:56:42</publishTime>
+    </File>
+    <File Include="Services/SAM02300Service/SAM02300StreamingService/SAM02300StreamingService.svc">
+      <publishTime>02/07/2018 15:51:37</publishTime>
+    </File>
+    <File Include="Services/SAM02400Service/SAM02400Service.svc">
+      <publishTime>01/23/2020 17:33:20</publishTime>
+    </File>
+    <File Include="Services/SAM02400Service/SAM02400StreamingService/SAM02400StreamingService.svc">
+      <publishTime>01/23/2020 17:34:15</publishTime>
+    </File>
+    <File Include="Services/SAM02500Service/SAM02500Service.svc">
+      <publishTime>01/29/2020 13:57:51</publishTime>
+    </File>
+    <File Include="Services/SAM02500Service/SAM02500StreamingService/SAM02500StreamingService.svc">
+      <publishTime>01/29/2020 14:00:32</publishTime>
+    </File>
+    <File Include="Services/SAM02600Service/SAM02600Service.svc">
+      <publishTime>07/15/2020 09:09:03</publishTime>
+    </File>
+    <File Include="Services/SAM02600Service/SAM02600StreamingService/SAM02600StreamingService.svc">
+      <publishTime>07/15/2020 09:11:56</publishTime>
+    </File>
+    <File Include="Services/SAM02700Service/SAM02700Service.svc">
+      <publishTime>07/15/2020 09:16:53</publishTime>
+    </File>
+    <File Include="Services/SAM02700Service/SAM02700StreamingService/SAM02700StreamingService.svc">
+      <publishTime>07/15/2020 09:19:07</publishTime>
+    </File>
+    <File Include="Services/TestServices/TestReportService.svc">
+      <publishTime>09/10/2018 12:02:18</publishTime>
+    </File>
+    <File Include="Services/TestServices/TestReportStreamingService/TestReportStreamingService.svc">
+      <publishTime>09/10/2018 12:02:54</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/24/2022 15:51:35</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

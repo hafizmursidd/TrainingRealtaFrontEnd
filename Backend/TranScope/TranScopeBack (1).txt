@@ -1,0 +1,6 @@
+TranScopeCls
+	TranScopeDataDTO ProcessWithoutTransactionDB(int poProcessRecordCount)
+		Customers = GetAllCustomer(poProcessRecordCount)
+
+	List<CustomerDbDTO> GetAllCustomer(int pnCount)
+

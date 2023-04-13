@@ -1,0 +1,4 @@
+curl --location --request POST 'http://localhost:5046/api/Context/GetOrderList' \
+--header '_internalcontext_company_id: {"TypeFullName":"System.String","TypeNameSpace":"","Value":"RCD"}' \
+--header 'R_CustomContext: {"PROGRAM_CONTEXT":{"TypeFullName":"ContextCommon.ProgramContextDTO","TypeNameSpace":"ContextCommon","Value":{"DepartmentId":"RnD"}}}' \
+--header 'R_StreamingContext: {"ORDER_STREAM_CONTEXT":{"TypeFullName":"ContextCommon.GetOrderListContextDTO","TypeNameSpace":"ContextCommon","Value":{"SalesId":"S-1","OrderCount":"5"}}}'

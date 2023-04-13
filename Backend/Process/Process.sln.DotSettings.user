@@ -1,0 +1,24 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FAPIBackEnd_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FAPICommonDTO_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FAPICommon_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FAPIStartUp_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FAuthenticationBack_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FAuthenticationEnumAndInterface_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FCommonFrontBackAPI_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FContextAPIMiddleware_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FContextBackEnd_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FContextEnumAndInterface_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FControllerPlugins_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FExceptionAPIMiddleware_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FHelperController_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FLogHeaderMiddleware_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FPluginsCommon_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CBack_005CR_005FSecurity_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CFront_005CR_005FAPIClient_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CFront_005CR_005FAPICommonDTO_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CFront_005CR_005FAuthenticationEnumAndInterface_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CFront_005CR_005FCommonFrontBackAPI_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CFront_005CR_005FContextEnumAndInterface_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CTrainingRealta_005CLatihan_005CRuntimeLibrary_005CFront_005CR_005FProcessAndUploadFront_002Edll/@EntryIndexedValue">True</s:Boolean>
+	</wpf:ResourceDictionary>

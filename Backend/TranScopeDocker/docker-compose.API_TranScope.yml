@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+
+   transcope_svc:
+     image: api_transcope
+     container_name: cont_transcope
+     build:
+      context: .
+      dockerfile: Dockerfile.API_TranScope
+     ports:
+        - "5000:80"
+     environment:
+       - R_DBSection__R_DBConfigs__0__ConnectionString=server=192.168.2.17,1433;Initial Catalog=Realta_DB;User ID=sa;Password=F8093F6CAEAFDDC975507D0EEBD760E4;

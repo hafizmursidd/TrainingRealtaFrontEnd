@@ -1,0 +1,15 @@
+Project
+================
+<ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+
+Controller
+=============
+using Microsoft.AspNetCore.Mvc;
+using R_Common;
+using R_BackEnd;
+
+[Route("api/[controller]/[action]")]
+[ApiController]
+

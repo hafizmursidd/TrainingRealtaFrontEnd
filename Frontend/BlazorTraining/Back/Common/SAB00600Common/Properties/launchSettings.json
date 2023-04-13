@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "SAB00600Common": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:35739;http://localhost:35742"
+    }
+  }
+}

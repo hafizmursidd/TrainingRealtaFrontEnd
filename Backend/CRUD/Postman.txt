@@ -1,0 +1,13 @@
+curl --location --request POST 'http://localhost:5142/api/CRUD/R_ServiceSave' \
+--header '_internalcontext_company_id: {"TypeFullName":"System.String","TypeNameSpace":"","Value":"001"}' \
+--header '_internalcontext_culture: {"TypeFullName":"System.String","TypeNameSpace":"","Value":"id"}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "Entity": {
+    "CCOMPANY_ID": "001",
+    "CustomerID": "C01",
+    "CustomerName": "Customer C01",
+    "ContactName": "Contact C01"
+  },
+  "CRUDMode": "AddMode"
+}'

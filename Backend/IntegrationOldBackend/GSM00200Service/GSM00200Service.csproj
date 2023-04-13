@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+	    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="R_APIBackEnd">
+        <HintPath>..\RuntimeLibrary\Back\R_APIBackEnd.dll</HintPath>
+      </Reference>
+      <Reference Include="R_APICommon">
+        <HintPath>..\RuntimeLibrary\Back\R_APICommon.dll</HintPath>
+      </Reference>
+      <Reference Include="R_CommonFrontBackAPI">
+        <HintPath>..\RuntimeLibrary\Back\R_CommonFrontBackAPI.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GSM00200Back\GSM00200Back.vbproj" />
+      <ProjectReference Include="..\GSM00200Common\GSM00200Common.csproj" />
+    </ItemGroup>
+
+</Project>

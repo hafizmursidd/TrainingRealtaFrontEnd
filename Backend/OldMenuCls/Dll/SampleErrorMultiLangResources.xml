@@ -1,0 +1,52 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SampleErrorMultiLangResources
+</name>
+</assembly>
+<members>
+<member name="T:SampleErrorMultiLangResources.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:SampleErrorMultiLangResources.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:SampleErrorMultiLangResources.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:SampleErrorMultiLangResources.My.Resources.SampleErrorMultiLangResources_msgrsc">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:SampleErrorMultiLangResources.My.Resources.SampleErrorMultiLangResources_msgrsc.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:SampleErrorMultiLangResources.My.Resources.SampleErrorMultiLangResources_msgrsc.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:SampleErrorMultiLangResources.My.Resources.SampleErrorMultiLangResources_msgrsc.Err01">
+<summary>
+  Looks up a localized string similar to testttttttt error 1.
+</summary>
+</member>
+<member name="P:SampleErrorMultiLangResources.My.Resources.SampleErrorMultiLangResources_msgrsc.Err02">
+<summary>
+  Looks up a localized string similar to tess error 2.
+</summary>
+</member>
+</members>
+</doc>

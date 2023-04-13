@@ -1,0 +1,595 @@
+﻿@inherits R_Page
+
+<R_Row Class="mb-2">
+    <R_Column ColumnSize="1">
+        <R_Button>Add New</R_Button>
+    </R_Column>
+    <R_Column ColumnSize="1">
+        <R_Button>Copy</R_Button>
+    </R_Column>
+    <R_Column ColumnSize="1">
+        <R_Button>Modify</R_Button>
+    </R_Column>
+    <R_Column ColumnSize="1">
+        <R_Button>Cancel Rsv</R_Button>
+    </R_Column>
+    <R_Column ColumnSize="1">
+        <R_Button>Conf. WL</R_Button>
+    </R_Column>
+    <R_Column ColumnSize="1">
+        <R_Button>Reconfirm</R_Button>
+    </R_Column>
+    <R_Column ColumnSize="1">
+        <R_Button>Rsv. Conf.</R_Button>
+    </R_Column>
+    <R_Column ColumnSize="1">
+        <R_Button>Attachment</R_Button>
+    </R_Column>
+    <R_Column ColumnSize="1">
+        <R_Button>Approval Log</R_Button>
+    </R_Column>
+    <R_Column ColumnSize="1">
+        <R_Button>Changes</R_Button>
+    </R_Column>
+
+    <R_Column ColumnSize="1">
+    </R_Column>
+
+    <R_Column ColumnSize="1">
+        <R_Button>Join Group</R_Button>
+    </R_Column>
+</R_Row>
+
+<R_Row>
+    <R_Column ColumnSize="6">
+        <R_Card Title="Guest Information">
+            <R_CardContent>
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Last Name</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>First Name</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="3" Class="text-end">
+                        <R_Label>Guest ID</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="3">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Company</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="7">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>SC Code</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Travel Agent</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="7">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>IATA Code</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Primary</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Allotment</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="3">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Loyalty</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="3">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="1"></R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Guest Profile</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Company Info</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>T. Agent Info</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Loyalty Info</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Allotment Info</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="1"></R_Column>
+                </R_Row>
+            </R_CardContent>
+        </R_Card>
+    </R_Column>
+
+    <R_Column ColumnSize="6">
+        <R_Card Title="Reservation">
+            <R_CardContent>
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Last Name</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>First Name</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="3" Class="text-end">
+                        <R_Label>Guest ID</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="3">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Company</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="7">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>SC Code</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Travel Agent</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="7">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>IATA Code</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Primary</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Allotment</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="3">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Loyalty</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="3">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="1"></R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Guest Profile</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Company Info</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>T. Agent Info</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Loyalty Info</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Allotment Info</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="1"></R_Column>
+                </R_Row>
+            </R_CardContent>
+        </R_Card>
+    </R_Column>
+</R_Row>
+
+<R_Row>
+    <R_Column ColumnSize="6">
+        <R_Card Title="Booking Information">
+            <R_CardContent>
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Sales</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="7">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Booker</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="7">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Remark</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="10">
+                        <R_TextArea></R_TextArea>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Group</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="8">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Crt/Upd</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1" Class="text-center">
+                        <R_Label>/</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="1"></R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Tracing</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Notes</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>CRS Info</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1"></R_Column>
+                </R_Row>
+            </R_CardContent>
+        </R_Card>
+    </R_Column>
+
+    <R_Column ColumnSize="6">
+        <R_Card Title="Payment">
+            <R_CardContent>
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Sales</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="7">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Booker</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_Button>...</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="7">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Remark</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="10">
+                        <R_TextArea></R_TextArea>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Group</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="8">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Crt/Upd</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1" Class="text-center">
+                        <R_Label>/</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1">
+                        <R_TextBox></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="1"></R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Tracing</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>Notes</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_Button>CRS Info</R_Button>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="2">
+                        <R_CheckBox></R_CheckBox>
+                    </R_Column>
+                    <R_Column ColumnSize="1"></R_Column>
+                </R_Row>
+            </R_CardContent>
+        </R_Card>
+    </R_Column>
+</R_Row>
+
+<R_Row>
+    <R_Column ColumnSize="8"></R_Column>
+    <R_Column ColumnSize="2">
+        <R_Button>Save</R_Button>
+    </R_Column>
+    <R_Column ColumnSize="2">
+        <R_Button>Abort</R_Button>
+    </R_Column>
+</R_Row>
+
+@code {
+
+}

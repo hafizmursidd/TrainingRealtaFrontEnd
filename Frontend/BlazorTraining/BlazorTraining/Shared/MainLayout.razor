@@ -1,0 +1,28 @@
+﻿@layout TelerikLayout
+@inherits LayoutComponentBase
+@using R_BlazorFrontEnd.Controls.MessageBox
+@using R_BlazorFrontEnd.Controls.Forms
+@using Telerik.Blazor.Components
+
+<TelerikRootComponent>
+    <div class="page">
+        <R_MessageBoxContainer />
+        <NavMenu />
+
+        @*<div class="sidebar">
+                <NavMenu />
+            </div>*@
+
+        <main>
+            <div class="top-row px-4">
+                @*<a @onclick="@Logout" class="dropdown-item ms-0 "><i class="fas fa-sign-out-alt me-2"></i>Log Out</a>*@
+            </div>
+
+            <article class="content px-4">
+                <R_ErrorHandler>
+                    <BlazorTraining.Shared.Tabs.MenuTabSet />
+                </R_ErrorHandler>
+            </article>
+        </main>
+    </div>
+</TelerikRootComponent>

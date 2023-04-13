@@ -1,0 +1,24 @@
+﻿@inherits R_Page
+
+<TelerikCard Width="500px">
+    <CardBody>
+        <R_Grid @ref="@_gridRef"
+                DataSource="@GridViewModel.CategoryList" 
+                Pageable 
+                PageSize="10"
+                R_ServiceGetListRecord="@R_ServiceGetListRecord">
+            <R_GridColumns>
+                <R_GridNumericColumn FieldName="CategoryID" HeaderText="Category Id"></R_GridNumericColumn>
+                <R_GridTextColumn FieldName="CategoryName" HeaderText="Category Name"></R_GridTextColumn>
+            </R_GridColumns>
+        </R_Grid>
+    </CardBody>
+
+    <CardActions Layout="@Telerik.Blazor.CardActionsLayout.End">
+        <TelerikButton OnClick="@OnClose">Close</TelerikButton>
+    </CardActions>
+</TelerikCard>
+
+@code {
+    
+}

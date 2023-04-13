@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\**" />
+    <Content Remove="ViewModels\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <None Remove="ViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="SAB01400CategoryClient.cs" />
+    <Compile Remove="SAB01400ProductClient.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.12" />
+    <PackageReference Include="Telerik.UI.for.Blazor" Version="3.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Back\Common\SAB01300Common\SAB01300Common.csproj" />
+    <ProjectReference Include="..\..\ViewModel\SAB01300Model\SAB01300Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="R_APIClient">
+      <HintPath>..\..\..\Dll Front\R_APIClient.dll</HintPath>
+    </Reference>
+    <Reference Include="R_APICommonDTO">
+      <HintPath>..\..\..\Dll Front\R_APICommonDTO.dll</HintPath>
+    </Reference>
+    <Reference Include="R_BlazorFrontEnd">
+      <HintPath>..\..\..\Dll Front\R_BlazorFrontEnd.dll</HintPath>
+    </Reference>
+    <Reference Include="R_BlazorFrontEnd.Controls">
+      <HintPath>..\..\..\Dll Front\R_BlazorFrontEnd.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="R_BusinessObjectFront">
+      <HintPath>..\..\..\Dll Front\R_BusinessObjectFront.dll</HintPath>
+    </Reference>
+    <Reference Include="R_CommonFrontBackAPI">
+      <HintPath>..\..\..\Dll Back\R_CommonFrontBackAPI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

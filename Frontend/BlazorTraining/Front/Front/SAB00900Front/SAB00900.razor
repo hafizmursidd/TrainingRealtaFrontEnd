@@ -1,0 +1,157 @@
+﻿@page "/SAB00900"
+@inherits R_Page
+@inject R_ILocalizer<SAB00900FrontResources.Resources_Dummy_Class> _localizer
+@using SAB00900Model.ViewModels
+
+<R_StackLayout>
+  <R_StackLayout Row="true">
+    <R_ItemLayout xs="2">
+      <R_Label>@_localizer["_ProductId"]</R_Label>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="4">
+      <R_NumericTextBox @bind-Value="@ViewModel.Data.ProductID"
+                        R_ConductorSource="@_conductorRef"
+                        R_EnableAdd="true"
+                        R_EnableEdit="false">
+      </R_NumericTextBox>
+    </R_ItemLayout>
+  </R_StackLayout>
+
+  <R_StackLayout Row="true">
+    <R_ItemLayout xs="2">
+      <R_Label>@_localizer["_ProductName"]</R_Label>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="4">
+      <R_TextBox @bind-Value="@ViewModel.Data.ProductName"
+                 R_ConductorSource="@_conductorRef"
+                 R_EnableAdd="true"
+                 R_EnableEdit="true">
+      </R_TextBox>
+    </R_ItemLayout>
+  </R_StackLayout>
+
+  <R_StackLayout Row="true">
+    <R_ItemLayout xs="2">
+      <R_Label>@_localizer["_Category"]</R_Label>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="4">
+      <R_DropDownList Data="@ViewModel.CategoryList"
+                      ValueField="CategoryID"
+                      TextField="CategoryName"
+                      @bind-Value="@ViewModel.Data.CategoryID"
+                      R_ConductorSource="@_conductorRef"
+                      R_EnableAdd="true"
+                      R_EnableEdit="true">
+      </R_DropDownList>
+    </R_ItemLayout>
+  </R_StackLayout>
+
+  <R_StackLayout Row="true">
+    <R_ItemLayout xs="2">
+      <R_Label>@_localizer["_Price"]</R_Label>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="4">
+      <R_NumericTextBox @bind-Value="@ViewModel.Data.UnitPrice"
+                        R_ConductorSource="@_conductorRef"
+                        R_EnableAdd="true"
+                        R_EnableEdit="true">
+      </R_NumericTextBox>
+    </R_ItemLayout>
+  </R_StackLayout>
+
+  <R_StackLayout Row="true">
+    <R_ItemLayout xs="2">
+      <R_Label>@_localizer["_Stock"]</R_Label>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="4">
+      <R_NumericTextBox @bind-Value="@ViewModel.Data.UnitsInStock"
+                        R_ConductorSource="@_conductorRef"
+                        R_EnableAdd="true"
+                        R_EnableEdit="true">
+      </R_NumericTextBox>
+    </R_ItemLayout>
+  </R_StackLayout>
+
+  <R_StackLayout Row="true">
+    <R_ItemLayout xs="2">
+      <R_Label>@_localizer["_Discontinued"]</R_Label>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="4">
+      <R_RadioGroup Data="@ViewModel.Options"
+                    @bind-Value="@ViewModel.ChosenOption"
+                    ValueField="@nameof(RadioModel.Id)"
+                    TextField="@nameof(RadioModel.Text)"
+                    R_ConductorSource="@_conductorRef"
+                    R_EnableAdd="true"
+                    R_EnableEdit="true">
+      </R_RadioGroup>
+    </R_ItemLayout>
+  </R_StackLayout>
+
+  <R_StackLayout Row="true">
+    <R_ItemLayout xs="1">
+      <R_AddButton R_Conductor="@_conductorRef"></R_AddButton>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="1">
+      <R_EditButton R_Conductor="@_conductorRef"></R_EditButton>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="1">
+      <R_DeleteButton R_Conductor="@_conductorRef"></R_DeleteButton>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="1">
+      <R_SaveButton R_Conductor="@_conductorRef"></R_SaveButton>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="1">
+      <R_CancelButton R_Conductor="@_conductorRef"></R_CancelButton>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="1">
+      <R_Find R_ConductorSource="@_conductorRef"
+              R_Before_Open_Find="@R_Before_Open_Find"
+              R_After_Open_Find="@R_After_Open_Find"
+              R_EnableOther
+              R_FindModel="@FindModel">
+        @_localizer["_FindProduct"]
+      </R_Find>
+    </R_ItemLayout>
+
+    <R_ItemLayout xs="1">
+      <R_Button @ref="@SetButtonRef">Set Button</R_Button>
+    </R_ItemLayout>
+  </R_StackLayout>
+</R_StackLayout>
+
+<R_Conductor @ref="@_conductorRef"
+             R_ViewModel="@ViewModel"
+             R_IsHeader
+             R_ServiceGetRecord="@Conductor_ServiceGetRecord"
+             R_AfterAdd="@Conductor_AfterAdd"
+             R_Validation="@Conductor_Validation"
+             R_ServiceSave="@Conductor_ServiceSave"
+             R_AfterSave="@Conductor_AfterSave"
+             R_ServiceDelete="@Conductor_ServiceDelete"
+             R_Display="@Conductor_Display"
+             R_Saving="@Conductor_Saving"
+             R_AfterDelete="Conductor_AfterDelete"
+             R_BeforeAdd="Conductor_BeforeAdd"
+             R_BeforeEdit="Conductor_BeforeEdit"
+             R_BeforeDelete="Conductor_BeforeDelete"
+             R_BeforeCancel="Conductor_BeforeCancel"
+             R_CheckAdd="Conductor_CheckAdd"
+             R_CheckEdit="Conductor_CheckEdit"
+             R_CheckDelete="Conductor_CheckDelete"
+             R_SetAdd="Conductor_SetAdd"
+             R_SetEdit="Conductor_SetEdit"
+             R_SetHasData="Conductor_SetHasData"
+             R_SetOther="Conductor_SetOther">
+</R_Conductor>

@@ -1,0 +1,118 @@
+﻿@page "/SAB01300"
+@inherits R_Page
+
+<TelerikCard>
+    <CardBody>
+        <R_Grid @ref="@_gridRef"
+                DataSource="@ViewModel.CategoryList"
+                Pageable="true"
+                R_ConductorGridSource="@_conGridCategoryRef"
+                R_GridType="@R_eGridType.Original"
+                AllowAddNewRow="true"
+                AllowEditRow="true"
+                AllowDeleteRow="true"
+                R_ServiceGetListRecord="@GridCategory_ServiceGetListRecord">
+            <R_GridColumns>
+                <R_GridTextColumn FieldName="CategoryID" HeaderText="Category Id" R_EnableAdd></R_GridTextColumn>
+                <R_GridTextColumn FieldName="CategoryName" HeaderText="Category Name" R_EnableAdd R_EnableEdit></R_GridTextColumn>
+                <R_GridTextColumn FieldName="Description" R_EnableAdd R_EnableEdit></R_GridTextColumn>
+            </R_GridColumns>
+        </R_Grid>
+    </CardBody>
+</TelerikCard>
+
+<TelerikCard Width="50%">
+    <R_Grid @ref="@_gridProductRef"
+            DataSource="@ProductViewModel.ProductList"
+            Pageable="true"
+            R_ConductorSource="@_conductorProductRef"
+            R_GridType="@R_eGridType.Navigator"
+            R_ServiceGetListRecord="@GridProduct_ServiceGetListRecord">
+        <R_GridColumns>
+            <R_GridNumericColumn FieldName="ProductID" HeaderText="Product Id"></R_GridNumericColumn>
+            <R_GridTextColumn FieldName="ProductName" HeaderText="Product Name"></R_GridTextColumn>
+        </R_GridColumns>
+    </R_Grid>
+</TelerikCard>
+
+<TelerikCard Width="50%">
+    <CardHeader>
+        <CardTitle>Product Detail</CardTitle>
+    </CardHeader>
+
+    <CardBody>
+        <R_Row>
+            <R_Column ColumnSize="6">
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Product Id</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_NumericTextBox @bind-Value="@ProductViewModel.Data.ProductID"
+                                          R_ConductorSource="@_conductorProductRef"
+                                          Enabled="false"></R_NumericTextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Product Name</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox @bind-Value="@ProductViewModel.Data.ProductName"
+                                   R_ConductorSource="@_conductorProductRef"
+                                   R_EnableAdd="true"
+                                   R_EnableEdit="true"></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Unit Price</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_NumericTextBox @bind-Value="@ProductViewModel.Data.UnitPrice"
+                                          R_ConductorSource="@_conductorProductRef"
+                                          R_EnableAdd="true"
+                                          R_EnableEdit="true"></R_NumericTextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Discontinued</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_CheckBox @bind-Value="@ProductViewModel.Data.Discontinued"
+                                    R_ConductorSource="@_conductorProductRef"
+                                    R_EnableAdd="true"
+                                    R_EnableEdit="true"></R_CheckBox>
+                    </R_Column>
+                </R_Row>
+            </R_Column>
+        </R_Row>
+    </CardBody>
+
+    <CardActions>
+        <R_AddButton R_Conductor="@_conductorProductRef"></R_AddButton>
+        <R_EditButton R_Conductor="@_conductorProductRef"></R_EditButton>
+        <R_DeleteButton R_Conductor="@_conductorProductRef"></R_DeleteButton>
+        <R_SaveButton R_Conductor="@_conductorProductRef"></R_SaveButton>
+        <R_CancelButton R_Conductor="@_conductorProductRef"></R_CancelButton>
+    </CardActions>
+</TelerikCard>
+
+<R_ConductorGrid @ref="@_conGridCategoryRef"
+                 R_ViewModel="@ViewModel"
+                 R_IsHeader
+                 R_Display="@Grid_Display"
+                 R_ServiceGetRecord="@Grid_ServiceGetRecord"
+                 R_ServiceSave="@Grid_ServiceSave"
+                 R_ServiceDelete="@Grid_ServiceDelete">
+</R_ConductorGrid>
+
+<R_Conductor @ref="@_conductorProductRef"
+             R_ViewModel="@ProductViewModel"
+             R_ConductorParent="@_conGridCategoryRef"
+             R_DisableCancelConfirmation="false"
+             R_ServiceGetRecord="@ConductorProduct_ServiceGetRecord"></R_Conductor>

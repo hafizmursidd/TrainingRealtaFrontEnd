@@ -1,0 +1,35 @@
+Nuget Site
+Realta Nuget : https://www1.realta.net/realtanuget/nuget
+
+Common
+=====================
+Dependency assembly
+	R_APICommonDTO
+	R_CoomonFrontBackAPI
+
+CustomerStreamDTO
+	Field
+	public string CustomerId { get; set; } 
+        public string CustomerName { get; set; }
+
+CustomerDTO
+	public string CustomerId { get; set; }
+        public string CustomerName { get; set; }
+        public string DateOfBirth { get; set; }
+
+CustomerResultDTO
+	inherits R_APIResultBaseDTO
+
+	public CustomerDTO data { get; set; }
+
+GetCustomerByIdParameterDTO
+	public string CustomerId { get; set; }
+
+GetCustomersParameterDTO
+	public int CustomerCount { get; set; }
+
+Interface ICustomer
+	IAsyncEnumerable<CustomerStreamDTO> GetCustomersList(GetCustomersParameterDTO poParameter);
+        CustomerResultDTO GetCustomerByTd(GetCustomerByIdParameterDTO poParameter);
+	
+

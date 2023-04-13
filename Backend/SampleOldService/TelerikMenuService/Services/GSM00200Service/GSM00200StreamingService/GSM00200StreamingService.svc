@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="VB" Debug="true" Service="TelerikMenuService.GSM00200StreamingService" CodeBehind="GSM00200StreamingService.svc.vb" Factory= "R_BackEnd.R_StreamingServiceHostFactory"%>

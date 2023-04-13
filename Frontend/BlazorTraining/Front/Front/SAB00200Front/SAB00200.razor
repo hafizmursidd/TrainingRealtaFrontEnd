@@ -1,0 +1,32 @@
+@page "/SAB00200"
+@inherits R_Page
+
+<R_StackLayout>
+  <R_Grid @ref="@_gridRef"
+          DataSource="@EmployeeViewModel.EmployeeList"
+          Pageable="true"
+          R_ConductorGridSource="@_conGridEmployeeRef"
+          R_GridType="@R_eGridType.Original"
+          AllowAddNewRow="true"
+          AllowEditRow="true"
+          AllowDeleteRow="true"
+          R_ServiceGetListRecord="@Grid_R_ServiceGetListRecord">
+    <R_GridColumns>
+      <R_GridTextColumn FieldName="EmployeeID" HeaderText="Employee Id" />
+      <R_GridTextColumn FieldName="FirstName" HeaderText="First Name" R_EnableAdd R_EnableEdit/>
+      <R_GridTextColumn FieldName="LastName" HeaderText="Last Name" R_EnableAdd R_EnableEdit/>
+      <R_GridTextColumn FieldName="Address" HeaderText="Address" R_EnableAdd R_EnableEdit/>
+      <R_GridTextColumn FieldName="City" HeaderText="City" R_EnableAdd R_EnableEdit/>
+      <R_GridTextColumn FieldName="Country" HeaderText="Country" R_EnableAdd R_EnableEdit/>
+    </R_GridColumns>
+  </R_Grid>
+</R_StackLayout>
+
+<R_ConductorGrid @ref="@_conGridEmployeeRef"
+                 R_ViewModel="@EmployeeViewModel"
+                 R_IsHeader
+                 R_ServiceGetRecord="@Grid_ServiceGetRecord"
+                 R_Validation="@Grid_Validation"
+                 R_ServiceSave="@Grid_ServiceSave"
+                 R_ServiceDelete="@Grid_ServiceDelete"
+                 R_AfterDelete="@Grid_AfterDelete"/>

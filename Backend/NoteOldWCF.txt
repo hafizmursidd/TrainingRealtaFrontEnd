@@ -1,0 +1,17 @@
+Streaming
+===================
+Method
+GetTableHDList 
+	DTO GSM00200DTONon
+GetTableDTList
+	GSM00210DTOnon
+
+Single header
+=================
+Method CRUD
+	DTO GSM00200DTO
+
+Single Detail
+=================
+CRUD
+	DTO GSM00210DTO

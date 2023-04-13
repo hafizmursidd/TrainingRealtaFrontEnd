@@ -1,0 +1,76 @@
+ProcessConsole
+===============
+
+Dependency
+=================
+1.Nuget Realta.FrontCollectionNuGet
+
+assembly
+================
+<ItemGroup>
+    <Reference Include="R_APIClient">
+      <HintPath>..\..\RuntimeLibrary\Front\R_APIClient.dll</HintPath>
+    </Reference>
+    <Reference Include="R_APICommonDTO">
+      <HintPath>..\..\RuntimeLibrary\Front\R_APICommonDTO.dll</HintPath>
+    </Reference>
+    <Reference Include="R_AuthenticationEnumAndInterface">
+      <HintPath>..\..\RuntimeLibrary\Front\R_AuthenticationEnumAndInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="R_CommonFrontBackAPI">
+      <HintPath>..\..\RuntimeLibrary\Front\R_CommonFrontBackAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="R_ContextEnumAndInterface">
+      <HintPath>..\..\RuntimeLibrary\Front\R_ContextEnumAndInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="R_ProcessAndUploadFront">
+      <HintPath>..\..\RuntimeLibrary\Front\R_ProcessAndUploadFront.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+using R_APIClient;
+using R_CommonFrontBackAPI;
+using R_ProcessAndUploadFront;
+using R_APICommonDTO;
+using ProcessCommon;
+
+Variable class
+==================
+private static HttpClient loHttpClient;
+private static R_HTTPClient loClient;
+
+Main:
+===================
+loHttpClient = new HttpClient();
+loHttpClient.BaseAddress = new Uri("http://localhost:xxxx");
+R_HTTPClient.R_CreateInstanceWithName("DEFAULT", loHttpClient);
+loClient = R_HTTPClient.R_GetInstanceWithName("DEFAULT");
+
+ServiceAttachFile
+====================
+List<R_KeyValue> loUserParameters
+R_UploadPar loUploadPar
+R_ProcessAndUploadClient loCls
+
+//persiapkan User Par
+
+//Persiapkan UploadPar
+	-UserParameters
+	-Key
+	-File
+
+//Instantiate ProcessStatus
+
+//Persiapkan Process Class
+
+//Jalankan method 
+R_AttachFile
+
+
+Class 
+ProcessStatus:R_IProcessProgressStatus
+	public Task ReportProgress(int pnProgress, string pcStatus)
+        {
+            Console.WriteLine($"Step {pnProgress} with status {pcStatus}");
+            return Task.CompletedTask;
+        }

@@ -1,0 +1,33 @@
+using R_APIClient;
+using R_ContextEnumAndInterface;
+using R_ContextFrontEnd;
+using ContextCommon;
+
+Class Variable
+===============
+static HttpClient loHttpClient = null;
+static R_ContextHeader loContextHeader;
+
+Main
+===================
+loHttpClient = new HttpClient
+            {
+                BaseAddress = new Uri("http://localhost:5046/")
+            };
+
+//Persiapkan Context internal
+loContextHeader = new R_ContextHeader();
+loContextHeader.R_Context._SetInternalContext(R_InternalContextVarEnumerator.COMPANY_ID, "RCD");
+
+R_HTTPClient.R_CreateInstanceWithName("DEFAULT", loHttpClient, loContextHeader);
+
+Task.Run(()=>GetSalesStream());
+
+GetSalesStream
+==========================
+loContextHeader.R_Context.R_SetContext
+loContextHeader.R_Context.R_SetStreamingContext
+
+loSalesStreams= await R_HTTPClientWrapper.R_APIRequestStreamingObject<SalesStreamDTO>("api/Context", nameof(IContextProgram.GetSalesList), plSendWithContext: true, plSendWithToken: false)
+
+

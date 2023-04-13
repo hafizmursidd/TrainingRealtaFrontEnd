@@ -1,0 +1,11 @@
+Interface IGSM00200
+===================
+1.Inherits R_IServiceCRUDBase<GSM00200DTO>
+2.Method
+	IAsyncEnumerable<GSM00200DTONon> GetTableHDList();
+
+Interface IGSM00210
+===================
+1.Inherits R_IServiceCRUDBase<GSM00210DTO>
+2.Method
+	IAsyncEnumerable<GSM00210DTONon> GetTableDTList();

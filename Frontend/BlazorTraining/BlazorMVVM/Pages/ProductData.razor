@@ -1,0 +1,47 @@
+﻿@page "/productdata"
+
+<h3>Product Data</h3>
+
+@if (ProductDataViewModel.Products == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in ProductDataViewModel.Products)
+            {
+                <tr>
+                    <td>@product.ProductID</td>
+                    <td>@product.ProductName</td>
+                    <td>
+                        <button class="btn btn-light" @onclick="@(() => ProductDataViewModel.SetProduct(product))">Edit</button>
+                        <button class="btn btn-danger" @onclick="@(() => ProductDataViewModel.DeleteProduct(product))">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <EditForm Model="@ProductDataViewModel.Product" OnValidSubmit="@SaveProduct">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="id">Product ID</label>
+                <InputNumber class="form-control" id="id" disabled="@(!ProductDataViewModel.IsAdd)" @bind-Value=@ProductDataViewModel.Product.ProductID />
+            </div>
+            <div class="form-group">
+                <label for="name">Product Name</label>
+                <InputText class="form-control" id="name" @bind-Value=@ProductDataViewModel.Product.ProductName />
+            </div>
+            <button type="reset" class="btn btn-secondary" @onclick="@(() => ProductDataViewModel.AddProduct())">Add</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </EditForm>
+}

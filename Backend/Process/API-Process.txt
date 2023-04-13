@@ -1,0 +1,46 @@
+1.Dependency Assembly
+	Semua assembly back dg R_
+2.Nuget
+	Realta.BackCollectionNuGet
+3.Project
+	ProcessBack
+
+
+AppSettings
+================
+
+"R_DBSection": {
+    "CommandTimeout": 600,
+    "R_DBConfigs": [
+      {
+        "Name": "R_DefaultConnectionString",
+        "ConnectionString": "server=.\\sql2012;Initial Catalog=Realta_DB;User ID=sa;Password=F8093F6CAEAFDDC975507D0EEBD760E4;",
+        "ProviderName": "System.Data.SqlClient",
+        "KeywordForPassword": "Password"
+      },
+      {
+        "Name": "R_ReportConnectionString",
+        "ConnectionString": "server=172.16.5.57,57746;Initial Catalog=Realta_DB;User ID=sa;Password=F8093F6CAEAFDDC975507D0EEBD760E4;",
+        "ProviderName": "System.Data.SqlClient",
+        "KeywordForPassword": "Password"
+      }
+    ]
+  },
+
+Programs
+==========
+using R_APIStartUp;
+
+var loBuilder = WebApplication.CreateBuilder(args);
+loBuilder
+    .R_RegisterServices(builder =>
+    {
+        builder.R_DisableAuthentication();
+        //builder.R_DisableSwagger();
+        //builder.R_DisableGlobalException();
+        //builder.R_DisableContext();
+        //builder.R_DisableDatabase();
+    })
+    .Build()
+    .R_SetupMiddleware()
+    .Run();

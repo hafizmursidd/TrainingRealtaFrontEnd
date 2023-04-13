@@ -1,0 +1,15 @@
+GetSalesListDbParameterDTO
+	public string CompanyId { get; set; }
+        public string DepartmentId { get; set; }
+        public int SalesCount { get; set; }
+
+GetOrderListDbParameterDTO
+	public string CompanyId { get; set; }
+        public string DepartmentId { get; set; }
+        public string SalesId { get; set; }
+        public int OrderCount { get; set; }
+
+ContextCls
+	public List<SalesStreamDTO> GetSalesListDb(GetSalesListDbParameterDTO poParameter)
+	
+	public List<OrderStreamDTO> GetOrderListDb(GetOrderListDbParameterDTO poParameter)

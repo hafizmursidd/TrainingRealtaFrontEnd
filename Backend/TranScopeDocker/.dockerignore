@@ -1,0 +1,6 @@
+*.sln
+*.idea
+**\bin
+**\obj
+*.txt
+Dockerfile.*
