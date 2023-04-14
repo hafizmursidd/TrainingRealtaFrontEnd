@@ -70,6 +70,19 @@
                     R_After_Open_Find="@R_After_Open_Find"
                     R_EnableOther>Find Category</R_Find>
         </R_ItemLayout>
+
+        @*<R_ItemLayout xs="1">
+            <R_Detail R_ConductorSource="@_conductorRef"
+                    R_Before_Open_Form="@R_Before_Open_Form"
+                    R_EnableOther>Detail</R_Detail>
+        </R_ItemLayout>*@
+
+        @*<R_ItemLayout xs="1">
+            <R_PopupButton R_ConductorSource="@_conductorRef"
+                    R_Before_Open_Popup="@R_Before_Open_Popup"
+                    R_After_Open_Popup="@R_After_Open_Popup"
+                    R_EnableOther>Popup</R_PopupButton>
+        </R_ItemLayout>*@
     </R_StackLayout>
 </R_StackLayout>
 
@@ -97,7 +110,7 @@
 
         <R_ItemLayout xs="4">
             <R_NumericTextBox @bind-Value="@ProductViewModel.Data.ProductID"
-                              R_ConductorSource="@_conductorRef"
+                              R_ConductorSource="@_conductorProductRef"
                               Enabled="false"></R_NumericTextBox>
         </R_ItemLayout>
     </R_StackLayout>
@@ -109,7 +122,7 @@
 
         <R_ItemLayout xs="4">
             <R_TextBox @bind-Value="@ProductViewModel.Data.ProductName"
-                       R_ConductorSource="@_conductorRef"
+                       R_ConductorSource="@_conductorProductRef"
                        R_EnableAdd="true"
                        R_EnableEdit="true"></R_TextBox>
         </R_ItemLayout>
@@ -122,7 +135,7 @@
 
         <R_ItemLayout xs="4">
             <R_NumericTextBox @bind-Value="@ProductViewModel.Data.UnitPrice"
-                              R_ConductorSource="@_conductorRef"
+                              R_ConductorSource="@_conductorProductRef"
                               R_EnableAdd="true"
                               R_EnableEdit="true"></R_NumericTextBox>
         </R_ItemLayout>
@@ -135,7 +148,7 @@
 
         <R_ItemLayout xs="4">
             <R_CheckBox @bind-Value="@ProductViewModel.Data.Discontinued"
-                        R_ConductorSource="@_conductorRef"
+                        R_ConductorSource="@_conductorProductRef"
                         R_EnableAdd="true"
                         R_EnableEdit="true"></R_CheckBox>
         </R_ItemLayout>
@@ -176,8 +189,8 @@
 <R_Conductor @ref="@_conductorProductRef" 
              R_ViewModel="@ProductViewModel" 
              R_ConductorParent="@_conductorRef" 
-             R_DisableCancelConfirmation="false" 
+             R_DisableCancelConfirmation="true" 
              R_ServiceGetRecord="@ConductorProduct_ServiceGetRecord"></R_Conductor>
 
-<R_PredefinedDock R_ConductorSource="@_conductorRef" 
-                  R_InstantiateDock="@PreDock_InstantiateDock"></R_PredefinedDock>
+@*<R_PredefinedDock R_ConductorSource="@_conductorRef" 
+                  R_InstantiateDock="@PreDock_InstantiateDock"></R_PredefinedDock>*@

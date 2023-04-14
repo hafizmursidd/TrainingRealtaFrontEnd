@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="ViewModels\**" />
+    <Compile Remove="wwwroot\**" />
     <Content Remove="ViewModels\**" />
+    <Content Remove="wwwroot\**" />
     <EmbeddedResource Remove="ViewModels\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
     <None Remove="ViewModels\**" />
+    <None Remove="wwwroot\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,10 +35,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Back\Common\SAB01300Common\SAB01300Common.csproj" />
     <ProjectReference Include="..\..\ViewModel\SAB01300Model\SAB01300Model.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>

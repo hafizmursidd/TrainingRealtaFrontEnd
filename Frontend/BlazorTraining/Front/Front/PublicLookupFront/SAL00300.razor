@@ -1,0 +1,26 @@
+﻿@inherits R_Page
+@using PublicLookupCommon.DTOs
+
+<R_StackLayout>
+    <R_Grid @ref="@GridRef"
+            DataSource="_viewModel.ProductList"
+            R_ServiceGetListRecord="R_ServiceGetListRecordAsync"
+            Pageable
+            PageSize="15">
+        <R_GridColumns>
+            <R_GridNumericColumn FieldName=@nameof(SAL00300DTO.ProductID)
+                                 HeaderText="Product Id">
+            </R_GridNumericColumn>
+
+            <R_GridTextColumn FieldName=@nameof(SAL00300DTO.ProductName)
+                              HeaderText="Product Name">
+            </R_GridTextColumn>
+        </R_GridColumns>
+    </R_Grid>
+
+    <R_ItemLayout xs="2">
+        <R_Button OnClick="Button_OnClickAsync">
+            Select Data
+        </R_Button>
+    </R_ItemLayout>
+</R_StackLayout>

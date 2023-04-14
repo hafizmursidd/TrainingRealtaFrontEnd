@@ -21,6 +21,7 @@
     <ProjectReference Include="..\BlazorTrainingCommon\BlazorTrainingCommon.csproj" />
     <ProjectReference Include="..\Front\Front\SAB00100Front\SAB00100Front.csproj" />
     <ProjectReference Include="..\Front\Front\SAB00200Front\SAB00200Front.csproj" />
+    <ProjectReference Include="..\Front\Front\SAB00400Front\SAB00400Front\SAB00400Front.csproj" />
     <ProjectReference Include="..\Front\Front\SAB00600Front\SAB00600Front.csproj" />
     <ProjectReference Include="..\Front\Front\SAB00700Front\SAB00700Front.csproj" />
     <ProjectReference Include="..\Front\Front\SAB00900Front\SAB00900Front.csproj" />

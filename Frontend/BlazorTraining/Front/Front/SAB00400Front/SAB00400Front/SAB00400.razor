@@ -1,5 +1,87 @@
-﻿<h3>SAB00400</h3>
+﻿@page "/SAB00400"
+@inherits R_Page
 
-@code {
 
-}
+<TelerikCard>
+    <CardBody>
+        <R_Grid @ref="@_gridRef"
+                DataSource="@_viewModel.RegionList"
+                Pageable="true"
+                R_ConductorGridSource="@_conGridRegionRef"
+                R_GridType="@R_eGridType.Original"
+                AllowAddNewRow="true"
+                AllowEditRow="true"
+                AllowDeleteRow="true"
+                R_ServiceGetListRecord="@GridRegion_ServiceGetListRecord">
+            <R_GridColumns>
+                <R_GridTextColumn FieldName="RegionId" HeaderText="Region Id" R_EnableAdd></R_GridTextColumn>
+                <R_GridTextColumn FieldName="RegionDescription" HeaderText="Region Description" R_EnableAdd R_EnableEdit></R_GridTextColumn>
+            </R_GridColumns>
+        </R_Grid>
+    </CardBody>
+</TelerikCard>
+
+<TelerikCard Width="50%">
+    <R_Grid @ref="@_gridTerritoryRef"
+            DataSource="@_viewodelTerritory.TerritoryList"
+            Pageable="true"
+            R_ConductorSource="@_conductorTerritorytRef"
+            R_GridType="@R_eGridType.Navigator"
+            R_ServiceGetListRecord="@GridTerritory_ServiceGetListRecord">
+        <R_GridColumns>
+            <R_GridTextColumn FieldName="TerritoryId" HeaderText="Territory Id"></R_GridTextColumn>
+            <R_GridTextColumn FieldName="TerritoryDescription" HeaderText="Territory Description"></R_GridTextColumn>
+        </R_GridColumns>
+    </R_Grid>
+</TelerikCard>
+
+<TelerikCard Width="50%">
+    <CardHeader>
+        <CardTitle>Territory Detail</CardTitle>
+    </CardHeader>
+
+    <CardBody>
+        <R_Row>
+            <R_Column ColumnSize="6">
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Territory Id</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox @bind-Value="@_viewodelTerritory.Data.TerritoryId"
+                                   R_ConductorSource="@_conductorTerritorytRef"
+                                          Enabled="true"></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+                <R_Row>
+                    <R_Column ColumnSize="2">
+                        <R_Label>Territory Name</R_Label>
+                    </R_Column>
+                    <R_Column ColumnSize="4">
+                        <R_TextBox @bind-Value="@_viewodelTerritory.Data.TerritoryDescription"
+                                   R_ConductorSource="@_conductorTerritorytRef"
+                                   R_EnableAdd="true"
+                                   R_EnableEdit="true"></R_TextBox>
+                    </R_Column>
+                </R_Row>
+
+            </R_Column>
+        </R_Row>
+    </CardBody>
+
+    <CardActions>
+        <R_AddButton R_Conductor="@_conductorTerritorytRef"></R_AddButton>
+        <R_EditButton R_Conductor="@_conductorTerritorytRef"></R_EditButton>
+        <R_DeleteButton R_Conductor="@_conductorTerritorytRef"></R_DeleteButton>
+        <R_SaveButton R_Conductor="@_conductorTerritorytRef"></R_SaveButton>
+        <R_CancelButton R_Conductor="@_conductorTerritorytRef"></R_CancelButton>
+    </CardActions>
+</TelerikCard>
+
+<R_ConductorGrid @ref="@_conGridRegionRef"
+                 R_ViewModel="@_viewModel"
+                 R_IsHeader
+                 R_Display="@Grid_Display"
+                 R_ServiceGetRecord="@Grid_ServiceGetRecord">
+</R_ConductorGrid>

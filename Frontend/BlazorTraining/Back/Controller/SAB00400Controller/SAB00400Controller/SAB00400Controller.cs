@@ -85,6 +85,9 @@ namespace SAB00400Controller
             {
                 var loCls = new SAB00400Cls();
 
+                //ini merupakan context dari streaming yang didapatkan dari FRONT
+                //var getContext = R_Utility.R_GetStreamingContext<string>(ContextConstant.REGION_ID);
+               
                 var loResult = loCls.GetRegion();
                 loRtn = new SAB00400ListDTO<SAB00400DTO> { Data = loResult };
             }

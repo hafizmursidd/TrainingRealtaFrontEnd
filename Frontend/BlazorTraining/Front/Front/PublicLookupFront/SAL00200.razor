@@ -1,0 +1,24 @@
+﻿@inherits R_Page
+@using PublicLookupCommon.DTOs
+
+<R_StackLayout>
+    <R_Grid @ref="@GridRef"
+            DataSource="_viewModel.CategoryList"
+            R_ServiceGetListRecord="R_ServiceGetListRecordAsync">
+        <R_GridColumns>
+            <R_GridNumericColumn FieldName=@nameof(SAL00200DTO.CategoryID)
+                                 HeaderText="Category Id">
+            </R_GridNumericColumn>
+
+            <R_GridTextColumn FieldName=@nameof(SAL00200DTO.CategoryName)
+                              HeaderText="Category Name">
+            </R_GridTextColumn>
+        </R_GridColumns>
+    </R_Grid>
+
+    <R_ItemLayout xs="2">
+        <R_Button OnClick="Button_OnClickAsync">
+            Select Data
+        </R_Button>
+    </R_ItemLayout>
+</R_StackLayout>

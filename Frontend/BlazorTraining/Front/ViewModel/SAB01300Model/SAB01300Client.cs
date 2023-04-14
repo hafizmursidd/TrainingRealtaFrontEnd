@@ -18,7 +18,7 @@ namespace SAB01300Model
             string pcHttpClientName = DEFAULT_HTTP_NAME,
             string pcRequestServiceEndPoint = DEFAULT_SERVICEPOINT_NAME,
             bool plSendWithContext = true,
-            bool plSendWithToken = true) :
+            bool plSendWithToken = false) :
             base(pcHttpClientName, pcRequestServiceEndPoint, plSendWithContext, plSendWithToken)
         {
         }

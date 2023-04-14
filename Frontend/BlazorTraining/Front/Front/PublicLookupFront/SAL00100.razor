@@ -1,0 +1,28 @@
+﻿@inherits R_Page
+@using PublicLookupCommon.DTOs
+
+<R_StackLayout>
+    <R_Grid @ref="@GridRef"
+            DataSource="_viewModel.EmployeeList"
+            R_ServiceGetListRecord="R_ServiceGetListRecordAsync">
+        <R_GridColumns>
+            <R_GridNumericColumn FieldName=@nameof(SAL00100DTO.EmployeeID)
+                                 HeaderText="Employee Id">
+            </R_GridNumericColumn>
+
+            <R_GridTextColumn FieldName=@nameof(SAL00100DTO.FirstName)
+                              HeaderText="First Name">
+            </R_GridTextColumn>
+
+            <R_GridTextColumn FieldName=@nameof(SAL00100DTO.LastName)
+                              HeaderText="Last Name">
+            </R_GridTextColumn>
+        </R_GridColumns>
+    </R_Grid>
+
+    <R_ItemLayout xs="2">
+        <R_Button OnClick="Button_OnClickAsync">
+            Select Data
+        </R_Button>
+    </R_ItemLayout>
+</R_StackLayout>

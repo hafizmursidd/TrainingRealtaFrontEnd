@@ -10,12 +10,12 @@ namespace SAB00400
     public class SAB00400Client : R_BusinessObjectServiceClientBase<SAB00400DTO>, ISAB00400
     {
         private const string DEFAULT_HTTP_NAME = "R_DefaultServiceUrl";
-        private const string DEFAULT_SERVICEPOINT_NAME = "api/SAB01300";
+        private const string DEFAULT_SERVICEPOINT_NAME = "api/SAB00400";
         public SAB00400Client(
             string pcHttpClientName = DEFAULT_HTTP_NAME,
             string pcRequestServiceEndPoint = DEFAULT_SERVICEPOINT_NAME,
             bool plSendWithContext = true,
-            bool plSendWithToken = true) :
+            bool plSendWithToken = false) :
             base(pcHttpClientName, pcRequestServiceEndPoint, plSendWithContext, plSendWithToken)
         {
         }

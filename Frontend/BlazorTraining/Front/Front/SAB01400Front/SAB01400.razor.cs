@@ -4,6 +4,7 @@ using R_BlazorFrontEnd.Controls.DataControls;
 using R_BlazorFrontEnd.Controls.Events;
 using R_BlazorFrontEnd.Enums;
 using R_BlazorFrontEnd.Exceptions;
+using R_CommonFrontBackAPI;
 using SAB01300Common.DTOs;
 using SAB01300Model.ViewModels;
 
@@ -45,7 +46,9 @@ namespace SAB01400Front
             try
             {
                 var loParam = (SAB01300DTO)eventArgs.Data;
-                eventArgs.Result = await ViewModel.GetCategory(loParam.CategoryID);
+                await ViewModel.GetCategory(loParam.CategoryID);
+
+                eventArgs.Result = ViewModel.Category;
             }
             catch (Exception ex)
             {
@@ -84,7 +87,9 @@ namespace SAB01400Front
             try
             {
                 var loParam = (SAB01300DTO)eventArgs.Data;
-                eventArgs.Result = await ViewModel.SaveCategory(loParam, eventArgs.ConductorMode);
+                await ViewModel.SaveCategory(loParam, (eCRUDMode)eventArgs.ConductorMode);
+
+                eventArgs.Result = ViewModel.Category;
             }
             catch (Exception ex)
             {
@@ -146,7 +151,9 @@ namespace SAB01400Front
             try
             {
                 var loParam = (SAB01310DTO)eventArgs.Data;
-                eventArgs.Result = await ProductViewModel.GetProductById(loParam.ProductID);
+                await ProductViewModel.GetProductById(loParam.ProductID);
+
+                eventArgs.Result = ProductViewModel.Product;
             }
             catch (Exception ex)
             {
@@ -161,6 +168,25 @@ namespace SAB01400Front
         private void PreDock_InstantiateDock(R_PredefinedDockEventArgs eventArgs)
         {
             eventArgs.TargetPageType = typeof(TestPredefined);
+        }
+        #endregion
+
+        #region DETAIL
+        private void R_Before_Open_Form(R_DetailEventArgs eventArgs)
+        {
+            eventArgs.TargetPageType = typeof(TestPredefined);
+        }
+        #endregion
+
+        #region POPUP
+        private void R_Before_Open_Popup(R_BeforeOpenPopupEventArgs eventArgs)
+        {
+            eventArgs.TargetPageType = typeof(TestPredefined);
+        }
+
+        private void R_After_Open_Popup(R_AfterOpenPopupEventArgs eventArgs)
+        {
+
         }
         #endregion
     }
